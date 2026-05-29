@@ -4,39 +4,39 @@ import { fileURLToPath } from "node:url";
 import sharp from "sharp";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
-const iconsDir = join(root, "icons");
 const assetsDir = join(root, "assets");
 const websiteDir = join(root, "website");
 
 const logos = [
-  { source: "tab_memory_icon.png", out: "logo-dark.png" },
-  { source: "tab_memory_icon_light.png", out: "logo-light.png" },
+  { source: "tab_memory_icon.png", out: "logo-dark.png", size: 512 },
+  { source: "tab_memory_icon_light.png", out: "logo-light.png", size: 512 },
+];
+
+const favicons = [
+  { source: "tab_memory_icon_light.png", out: "favicon-light.png", size: 32 },
+  { source: "tab_memory_icon.png", out: "favicon-dark.png", size: 32 },
+  { source: "tab_memory_icon_light.png", out: "apple-touch-icon.png", size: 180 },
 ];
 
 mkdirSync(websiteDir, { recursive: true });
 
-const faviconSource =
-  [join(iconsDir, "icon-128.png"), join(assetsDir, "tab_memory_icon.png")].find(
-    (path) => existsSync(path),
-  ) ?? null;
-
-if (!faviconSource) {
-  console.error("Missing favicon source (icons/icon-128.png or assets/tab_memory_icon.png)");
-  process.exit(1);
-}
-
-await exportSquareLogo(faviconSource, join(websiteDir, "icon.png"), 128);
-
-for (const { source, out } of logos) {
+for (const { source, out, size } of [...logos, ...favicons]) {
   const input = join(assetsDir, source);
   if (!existsSync(input)) {
     console.error(`Missing ${input}`);
     process.exit(1);
   }
-  await exportSquareLogo(input, join(websiteDir, out), 512);
+  await exportSquareLogo(input, join(websiteDir, out), size);
 }
 
-console.log("website/icon.png, logo-dark.png, logo-light.png ready");
+// Fallback for browsers that ignore media queries on favicons
+await exportSquareLogo(
+  join(assetsDir, "tab_memory_icon_light.png"),
+  join(websiteDir, "icon.png"),
+  32,
+);
+
+console.log("website favicons and logos ready");
 
 async function exportSquareLogo(input, output, size) {
   const meta = await sharp(input).metadata();

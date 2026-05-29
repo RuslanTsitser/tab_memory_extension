@@ -4,6 +4,9 @@ icons/
 public/
 .vercel
 website/icon.png
+website/favicon-light.png
+website/favicon-dark.png
+website/apple-touch-icon.png
 website/logo-dark.png
 website/logo-light.png
 assets/logo-square.png
