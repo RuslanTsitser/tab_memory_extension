@@ -8,7 +8,7 @@ Browser extension (Chrome / Edge / Brave) that saves tabs **with context** — s
 - **Save:** visible-tab screenshot (JPEG), metadata in IndexedDB, tab closed
 - **History page:** count & storage size, sort by date/title, preview cards, open URL, delete one or clear all
 - **Adaptive UI** (light/dark via system theme)
-- **i18n:** English and Russian
+- **i18n:** English, Russian, German, Spanish, French, Portuguese, Japanese, Chinese (browser locale for extension; 8 languages on website)
 
 ## Development
 

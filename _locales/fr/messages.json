@@ -1,0 +1,86 @@
+{
+  "extName": {
+    "message": "Tab Memory"
+  },
+  "extDescription": {
+    "message": "Enregistrez vos onglets avec une capture d'écran et une note, puis fermez-les — retrouvez le contexte à tout moment depuis l'historique local."
+  },
+  "popupTitle": {
+    "message": "Tab Memory"
+  },
+  "noteLabel": {
+    "message": "Pourquoi avez-vous ouvert cet onglet ?"
+  },
+  "notePlaceholder": {
+    "message": "Contexte, tâche, rappel…"
+  },
+  "saveTitle": {
+    "message": "Enregistrer et fermer l'onglet"
+  },
+  "historyTitle": {
+    "message": "Historique"
+  },
+  "saving": {
+    "message": "Enregistrement de la capture…"
+  },
+  "saved": {
+    "message": "Onglet enregistré"
+  },
+  "noActiveTab": {
+    "message": "Aucun onglet actif trouvé"
+  },
+  "errorSave": {
+    "message": "Impossible d'enregistrer l'onglet. Réessayez."
+  },
+  "errorCannotCapture": {
+    "message": "Cette page ne peut pas être capturée (page interne du navigateur)."
+  },
+  "statTabs": {
+    "message": "Onglets enregistrés"
+  },
+  "statStorage": {
+    "message": "Espace utilisé"
+  },
+  "sortLabel": {
+    "message": "Trier par"
+  },
+  "sortDateDesc": {
+    "message": "Date (plus récent)"
+  },
+  "sortDateAsc": {
+    "message": "Date (plus ancien)"
+  },
+  "sortTitleAsc": {
+    "message": "Titre (A–Z)"
+  },
+  "sortTitleDesc": {
+    "message": "Titre (Z–A)"
+  },
+  "clearHistory": {
+    "message": "Effacer l'historique"
+  },
+  "emptyHistory": {
+    "message": "Aucun onglet enregistré pour l'instant. Utilisez le popup de l'extension pour enregistrer un onglet."
+  },
+  "noNote": {
+    "message": "Aucune note"
+  },
+  "openTab": {
+    "message": "Ouvrir l'onglet"
+  },
+  "deleteTab": {
+    "message": "Supprimer"
+  },
+  "confirmDelete": {
+    "message": "Supprimer cet onglet enregistré ?"
+  },
+  "confirmClear": {
+    "message": "Supprimer tous les onglets enregistrés et les captures ? Cette action est irréversible."
+  },
+  "deleted": {
+    "message": "Onglet supprimé"
+  },
+  "cleared": {
+    "message": "Historique effacé"
+  }
+}

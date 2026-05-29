@@ -9,10 +9,6 @@
       content="Chrome extension: save tabs with a screenshot and note, close them without losing context. 100% local storage."
     />
     <meta property="og:title" content="Tab Memory" />
-    <meta
-      property="og:description"
-      content="Close cluttered tabs without forgetting why you opened them."
-    />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="/logo-dark.png" />
     <link rel="icon" href="/favicon-light.png" type="image/png" sizes="32x32" media="(prefers-color-scheme: light)" />
@@ -23,19 +19,19 @@
   </head>
   <body>
     <header class="site-header">
-      <a class="site-header__brand" href="/">
+      <a class="site-header__brand" data-lhref="home" href="/">
         <picture>
           <source srcset="/logo-light.png" media="(prefers-color-scheme: light)" />
           <img src="/logo-dark.png" alt="" width="32" height="32" />
         </picture>
-        Tab Memory
+        <span data-i18n="brand">Tab Memory</span>
       </a>
       <nav class="site-nav" aria-label="Main">
-        <a href="#features">Features</a>
-        <a href="#how-it-works">How it works</a>
-        <a href="/privacy/">Privacy</a>
-        <a href="/support/">Support</a>
-        <a class="lang-pill" href="/ru/" hreflang="ru">RU</a>
+        <a data-lhref="features" href="#features" data-i18n="navFeatures">Features</a>
+        <a data-lhref="how" href="#how-it-works" data-i18n="navHow">How it works</a>
+        <a data-lhref="privacy" href="/privacy/" data-i18n="navPrivacy">Privacy</a>
+        <a data-lhref="support" href="/support/" data-i18n="navSupport">Support</a>
+        <div id="lang-switcher"></div>
       </nav>
     </header>
 
@@ -45,43 +41,37 @@
           <source srcset="/logo-light.png" media="(prefers-color-scheme: light)" />
           <img class="hero__icon" src="/logo-dark.png" alt="Tab Memory" width="112" height="112" />
         </picture>
-        <h1>Close tabs.<br />Keep the context.</h1>
-        <p class="hero__lead">
-          Tab Memory saves a screenshot, your note, URL, and page title — then closes the
-          tab. No more tab hoarding. No more forgotten bookmarks.
-        </p>
+        <h1 data-i18n-html="heroTitle">Close tabs.<br />Keep the context.</h1>
+        <p class="hero__lead" data-i18n="heroLead">Tab Memory saves a screenshot, your note, URL, and page title — then closes the tab.</p>
         <div class="hero__actions">
-          <a class="btn btn--filled" href="#how-it-works">
+          <a class="btn btn--filled" data-lhref="how" href="#how-it-works">
             <span class="material-symbols-outlined" aria-hidden="true">play_arrow</span>
-            See how it works
+            <span data-i18n="ctaHow">See how it works</span>
           </a>
-          <a class="btn btn--outlined" href="/privacy/">Privacy Policy</a>
+          <a class="btn btn--outlined" data-lhref="privacy" href="/privacy/" data-i18n="ctaPrivacy">Privacy Policy</a>
         </div>
       </div>
     </section>
 
     <section class="section section--alt">
       <div class="container">
-        <h2 class="section__title">The problem with too many tabs</h2>
-        <p class="section__subtitle">
-          You want a clean browser, but closing tabs feels risky. Ordinary bookmarks pile up
-          and you forget why you saved them.
-        </p>
+        <h2 class="section__title" data-i18n="problemTitle">The problem with too many tabs</h2>
+        <p class="section__subtitle" data-i18n="problemSubtitle">You want a clean browser, but closing tabs feels risky.</p>
         <div class="compare">
           <article class="compare__card compare__card--bad">
-            <h3>Without Tab Memory</h3>
+            <h3 data-i18n="withoutTitle">Without Tab Memory</h3>
             <ul>
-              <li>Dozens of open tabs slow you down</li>
-              <li>Closing = losing context forever</li>
-              <li>Bookmarks without “why” become useless</li>
+              <li data-i18n="without1">Dozens of open tabs slow you down</li>
+              <li data-i18n="without2">Closing = losing context forever</li>
+              <li data-i18n="without3">Bookmarks without “why” become useless</li>
             </ul>
           </article>
           <article class="compare__card compare__card--good">
-            <h3>With Tab Memory</h3>
+            <h3 data-i18n="withTitle">With Tab Memory</h3>
             <ul>
-              <li>Save &amp; close in one click</li>
-              <li>Screenshot + note = full context</li>
-              <li>Reopen anytime from local history</li>
+              <li data-i18n="with1">Save &amp; close in one click</li>
+              <li data-i18n="with2">Screenshot + note = full context</li>
+              <li data-i18n="with3">Reopen anytime from local history</li>
             </ul>
           </article>
         </div>
@@ -90,50 +80,38 @@
 
     <section class="section" id="features">
       <div class="container">
-        <h2 class="section__title">Everything you need</h2>
-        <p class="section__subtitle">Built for researchers, developers, and tab hoarders.</p>
+        <h2 class="section__title" data-i18n="featuresTitle">Everything you need</h2>
+        <p class="section__subtitle" data-i18n="featuresSubtitle">Built for researchers, developers, and tab hoarders.</p>
         <div class="features">
           <article class="feature">
-            <div class="feature__icon">
-              <span class="material-symbols-outlined" aria-hidden="true">photo_camera</span>
-            </div>
-            <h3>Visual snapshot</h3>
-            <p>Captures what was on screen when you saved — not just a favicon and title.</p>
+            <div class="feature__icon"><span class="material-symbols-outlined" aria-hidden="true">photo_camera</span></div>
+            <h3 data-i18n="f1Title">Visual snapshot</h3>
+            <p data-i18n="f1Text">Captures what was on screen when you saved.</p>
           </article>
           <article class="feature">
-            <div class="feature__icon">
-              <span class="material-symbols-outlined" aria-hidden="true">edit_note</span>
-            </div>
-            <h3>Your note</h3>
-            <p>Write why you opened the tab: task, quote, reminder — up to 2000 characters.</p>
+            <div class="feature__icon"><span class="material-symbols-outlined" aria-hidden="true">edit_note</span></div>
+            <h3 data-i18n="f2Title">Your note</h3>
+            <p data-i18n="f2Text">Write why you opened the tab.</p>
           </article>
           <article class="feature">
-            <div class="feature__icon">
-              <span class="material-symbols-outlined" aria-hidden="true">tab_close</span>
-            </div>
-            <h3>Save &amp; close</h3>
-            <p>One action: store everything locally and close the tab immediately.</p>
+            <div class="feature__icon"><span class="material-symbols-outlined" aria-hidden="true">tab_close</span></div>
+            <h3 data-i18n="f3Title">Save &amp; close</h3>
+            <p data-i18n="f3Text">One action: store locally and close the tab.</p>
           </article>
           <article class="feature">
-            <div class="feature__icon">
-              <span class="material-symbols-outlined" aria-hidden="true">history</span>
-            </div>
-            <h3>History page</h3>
-            <p>Browse saved tabs with previews. Sort by date or title. Open or delete.</p>
+            <div class="feature__icon"><span class="material-symbols-outlined" aria-hidden="true">history</span></div>
+            <h3 data-i18n="f4Title">History page</h3>
+            <p data-i18n="f4Text">Browse saved tabs with previews.</p>
           </article>
           <article class="feature">
-            <div class="feature__icon">
-              <span class="material-symbols-outlined" aria-hidden="true">devices</span>
-            </div>
-            <h3>100% local</h3>
-            <p>No account, no cloud, no sync. Data stays in your browser’s IndexedDB.</p>
+            <div class="feature__icon"><span class="material-symbols-outlined" aria-hidden="true">devices</span></div>
+            <h3 data-i18n="f5Title">100% local</h3>
+            <p data-i18n="f5Text">No account, no cloud, no sync.</p>
           </article>
           <article class="feature">
-            <div class="feature__icon">
-              <span class="material-symbols-outlined" aria-hidden="true">dark_mode</span>
-            </div>
-            <h3>Light &amp; dark theme</h3>
-            <p>Follows your system appearance — comfortable in any lighting.</p>
+            <div class="feature__icon"><span class="material-symbols-outlined" aria-hidden="true">dark_mode</span></div>
+            <h3 data-i18n="f6Title">Light &amp; dark theme</h3>
+            <p data-i18n="f6Text">Follows your system appearance.</p>
           </article>
         </div>
       </div>
@@ -141,27 +119,26 @@
 
     <section class="section section--alt" id="how-it-works">
       <div class="container">
-        <h2 class="section__title">How it works</h2>
-        <p class="section__subtitle">Three seconds to save a tab with full context.</p>
+        <h2 class="section__title" data-i18n="howTitle">How it works</h2>
+        <p class="section__subtitle" data-i18n="howSubtitle">Three seconds to save a tab with full context.</p>
         <div class="steps">
           <article class="step">
-            <h3>Open the popup</h3>
-            <p>Click the Tab Memory icon on any tab you want to save.</p>
+            <h3 data-i18n="step1Title">Open the popup</h3>
+            <p data-i18n="step1Text">Click the Tab Memory icon on any tab you want to save.</p>
           </article>
           <article class="step">
-            <h3>Add a note</h3>
-            <p>Optionally describe why this tab matters — future you will thank you.</p>
+            <h3 data-i18n="step2Title">Add a note</h3>
+            <p data-i18n="step2Text">Optionally describe why this tab matters.</p>
           </article>
           <article class="step">
-            <h3>Save &amp; close</h3>
-            <p>Screenshot is stored, metadata saved, tab closed. Done.</p>
+            <h3 data-i18n="step3Title">Save &amp; close</h3>
+            <p data-i18n="step3Text">Screenshot is stored, metadata saved, tab closed.</p>
           </article>
           <article class="step">
-            <h3>Return from history</h3>
-            <p>Open History, find the preview, click to reopen the URL in a new tab.</p>
+            <h3 data-i18n="step4Title">Return from history</h3>
+            <p data-i18n="step4Text">Open History, find the preview, click to reopen the URL.</p>
           </article>
         </div>
-
         <div class="mock" aria-hidden="true">
           <div class="mock__inner">
             <div class="mock__header">
@@ -169,19 +146,15 @@
                 <source srcset="/logo-light.png" media="(prefers-color-scheme: light)" />
                 <img src="/logo-dark.png" alt="" width="24" height="24" style="border-radius: 6px" />
               </picture>
-              Tab Memory
+              <span data-i18n="brand">Tab Memory</span>
             </div>
             <div class="mock__field">
-              <span class="mock__label">Why did you open this tab?</span>
-              <div class="mock__textarea">Compare pricing models for Q2 report…</div>
+              <span class="mock__label" data-i18n="mockLabel">Why did you open this tab?</span>
+              <div class="mock__textarea" data-i18n="mockSample">Compare pricing models…</div>
             </div>
             <div class="mock__actions">
-              <div class="mock__btn">
-                <span class="material-symbols-outlined">bookmark_added</span>
-              </div>
-              <div class="mock__btn mock__btn--ghost">
-                <span class="material-symbols-outlined">history</span>
-              </div>
+              <div class="mock__btn"><span class="material-symbols-outlined">bookmark_added</span></div>
+              <div class="mock__btn mock__btn--ghost"><span class="material-symbols-outlined">history</span></div>
             </div>
           </div>
         </div>
@@ -190,29 +163,23 @@
 
     <section class="section">
       <div class="container">
-        <h2 class="section__title">History at a glance</h2>
-        <p class="section__subtitle">Your personal tab archive — stored only on this device.</p>
+        <h2 class="section__title" data-i18n="historyTitle">History at a glance</h2>
+        <p class="section__subtitle" data-i18n="historySubtitle">Your personal tab archive — stored only on this device.</p>
         <div class="features">
           <article class="feature">
-            <div class="feature__icon">
-              <span class="material-symbols-outlined" aria-hidden="true">grid_view</span>
-            </div>
-            <h3>Card grid with previews</h3>
-            <p>Each saved tab shows its screenshot, title, date, and note.</p>
+            <div class="feature__icon"><span class="material-symbols-outlined" aria-hidden="true">grid_view</span></div>
+            <h3 data-i18n="h1Title">Card grid with previews</h3>
+            <p data-i18n="h1Text">Each saved tab shows its screenshot, title, date, and note.</p>
           </article>
           <article class="feature">
-            <div class="feature__icon">
-              <span class="material-symbols-outlined" aria-hidden="true">sort</span>
-            </div>
-            <h3>Sort &amp; filter</h3>
-            <p>Order by date (newest/oldest) or title (A–Z / Z–A).</p>
+            <div class="feature__icon"><span class="material-symbols-outlined" aria-hidden="true">sort</span></div>
+            <h3 data-i18n="h2Title">Sort &amp; filter</h3>
+            <p data-i18n="h2Text">Order by date or title.</p>
           </article>
           <article class="feature">
-            <div class="feature__icon">
-              <span class="material-symbols-outlined" aria-hidden="true">storage</span>
-            </div>
-            <h3>Storage stats</h3>
-            <p>See how many tabs you saved and how much disk space they use.</p>
+            <div class="feature__icon"><span class="material-symbols-outlined" aria-hidden="true">storage</span></div>
+            <h3 data-i18n="h3Title">Storage stats</h3>
+            <p data-i18n="h3Text">See how many tabs you saved and disk space used.</p>
           </article>
         </div>
       </div>
@@ -220,35 +187,23 @@
 
     <section class="section section--alt">
       <div class="container">
-        <h2 class="section__title">FAQ</h2>
+        <h2 class="section__title" data-i18n="faqTitle">FAQ</h2>
         <div class="faq">
           <details>
-            <summary>Does Tab Memory sync across devices?</summary>
-            <p>
-              No. Everything is stored locally in your browser. We intentionally avoid
-              cloud sync to keep your browsing context private.
-            </p>
+            <summary data-i18n="faq1q">Does Tab Memory sync across devices?</summary>
+            <p data-i18n="faq1a">No. Everything is stored locally in your browser.</p>
           </details>
           <details>
-            <summary>What data is stored?</summary>
-            <p>
-              Screenshot (JPEG), page URL, page title, your note, and save timestamp. Nothing
-              is sent to any server.
-            </p>
+            <summary data-i18n="faq2q">What data is stored?</summary>
+            <p data-i18n="faq2a">Screenshot, URL, title, note, and timestamp.</p>
           </details>
           <details>
-            <summary>Can I save chrome:// pages?</summary>
-            <p>
-              No. Browser internal pages cannot be captured for security reasons. Regular web
-              pages work fine.
-            </p>
+            <summary data-i18n="faq3q">Can I save chrome:// pages?</summary>
+            <p data-i18n="faq3a">No. Browser internal pages cannot be captured.</p>
           </details>
           <details>
-            <summary>How do I delete everything?</summary>
-            <p>
-              Open History and click “Clear history”, or uninstall the extension. Both remove
-              local data from IndexedDB.
-            </p>
+            <summary data-i18n="faq4q">How do I delete everything?</summary>
+            <p data-i18n="faq4a">Clear history or uninstall the extension.</p>
           </details>
         </div>
       </div>
@@ -257,26 +212,26 @@
     <section class="section">
       <div class="container">
         <div class="privacy-cta">
-          <h2>Your data stays on your device</h2>
-          <p>
-            Tab Memory collects nothing. No analytics, no accounts, no third-party sharing.
-            Read the full policy for Chrome Web Store compliance.
-          </p>
-          <a class="btn btn--filled" href="/privacy/">Read Privacy Policy</a>
+          <h2 data-i18n="privacyCtaTitle">Your data stays on your device</h2>
+          <p data-i18n="privacyCtaText">Tab Memory collects nothing.</p>
+          <a class="btn btn--filled" data-lhref="privacy" href="/privacy/" data-i18n="privacyCtaBtn">Read Privacy Policy</a>
         </div>
       </div>
     </section>
 
     <footer class="site-footer">
       <div class="site-footer__inner">
-        <p class="site-footer__copy">© Tab Memory · Local-first browser extension</p>
+        <p class="site-footer__copy" data-i18n="footerCopy">© Tab Memory</p>
         <nav class="site-footer__links" aria-label="Footer">
-          <a href="/privacy/">Privacy</a>
-          <a href="/privacy/ru.html">Privacy (RU)</a>
-          <a href="/support/">Support</a>
-          <a href="https://github.com/RuslanTsitser/tab_memory_extension" rel="noopener noreferrer">GitHub</a>
+          <a data-lhref="privacy" href="/privacy/" data-i18n="footerPrivacy">Privacy</a>
+          <a data-lhref="support" href="/support/" data-i18n="footerSupport">Support</a>
+          <a href="https://github.com/RuslanTsitser/tab_memory_extension" rel="noopener noreferrer" data-i18n="footerGithub">GitHub</a>
         </nav>
       </div>
     </footer>
+    <script type="module">
+      import { initSiteI18n } from "/js/i18n.js";
+      initSiteI18n("home");
+    </script>
   </body>
 </html>

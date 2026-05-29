@@ -1,0 +1,86 @@
+{
+  "extName": {
+    "message": "Tab Memory"
+  },
+  "extDescription": {
+    "message": "保存标签页及截图和备注，然后关闭 — 随时从本地历史记录中恢复上下文。"
+  },
+  "popupTitle": {
+    "message": "Tab Memory"
+  },
+  "noteLabel": {
+    "message": "你为什么打开这个标签页？"
+  },
+  "notePlaceholder": {
+    "message": "上下文、任务、提醒…"
+  },
+  "saveTitle": {
+    "message": "保存并关闭标签页"
+  },
+  "historyTitle": {
+    "message": "历史记录"
+  },
+  "saving": {
+    "message": "正在保存截图…"
+  },
+  "saved": {
+    "message": "标签页已保存"
+  },
+  "noActiveTab": {
+    "message": "未找到活动标签页"
+  },
+  "errorSave": {
+    "message": "无法保存标签页，请重试。"
+  },
+  "errorCannotCapture": {
+    "message": "无法捕获此页面（浏览器内部页面）。"
+  },
+  "statTabs": {
+    "message": "已保存标签页"
+  },
+  "statStorage": {
+    "message": "已用存储空间"
+  },
+  "sortLabel": {
+    "message": "排序方式"
+  },
+  "sortDateDesc": {
+    "message": "日期（最新）"
+  },
+  "sortDateAsc": {
+    "message": "日期（最早）"
+  },
+  "sortTitleAsc": {
+    "message": "标题（A–Z）"
+  },
+  "sortTitleDesc": {
+    "message": "标题（Z–A）"
+  },
+  "clearHistory": {
+    "message": "清除历史记录"
+  },
+  "emptyHistory": {
+    "message": "尚无已保存的标签页。使用扩展弹窗保存标签页。"
+  },
+  "noNote": {
+    "message": "无备注"
+  },
+  "openTab": {
+    "message": "打开标签页"
+  },
+  "deleteTab": {
+    "message": "删除"
+  },
+  "confirmDelete": {
+    "message": "删除此已保存的标签页？"
+  },
+  "confirmClear": {
+    "message": "删除所有已保存的标签页和截图？此操作无法撤销。"
+  },
+  "deleted": {
+    "message": "标签页已删除"
+  },
+  "cleared": {
+    "message": "历史记录已清除"
+  }
+}

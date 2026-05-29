@@ -13,54 +13,53 @@
   </head>
   <body>
     <header class="site-header">
-      <a class="site-header__brand" href="/">
+      <a class="site-header__brand" data-lhref="home" href="/">
         <picture>
           <source srcset="/logo-light.png" media="(prefers-color-scheme: light)" />
           <img src="/logo-dark.png" alt="" width="32" height="32" />
         </picture>
-        Tab Memory
+        <span data-i18n="brand">Tab Memory</span>
       </a>
       <nav class="site-nav" aria-label="Main">
-        <a href="/#features">Features</a>
-        <a href="/privacy/">Privacy</a>
-        <a href="/support/" aria-current="page">Support</a>
-        <a class="lang-pill" href="/ru/">RU</a>
+        <a data-lhref="features" href="/#features" data-i18n="navFeatures">Features</a>
+        <a data-lhref="privacy" href="/privacy/" data-i18n="navPrivacy">Privacy</a>
+        <a data-lhref="support" href="/support/" aria-current="page" data-i18n="navSupport">Support</a>
+        <div id="lang-switcher"></div>
       </nav>
     </header>
 
     <main class="page-main">
-      <h1>Support</h1>
-      <p class="lead">Questions, bugs, or feedback about Tab Memory.</p>
+      <h1 data-i18n="title">Support</h1>
+      <p class="lead" data-i18n="lead">Questions, bugs, or feedback about Tab Memory.</p>
 
-      <h2>GitHub</h2>
+      <h2 data-i18n="githubTitle">GitHub</h2>
       <p>
-        Report issues and feature requests:
-        <a href="https://github.com/RuslanTsitser/tab_memory_extension/issues" rel="noopener noreferrer">
-          tab_memory_extension/issues
-        </a>
+        <span data-i18n="githubText">Report issues and feature requests:</span>
+        <a href="https://github.com/RuslanTsitser/tab_memory_extension/issues" rel="noopener noreferrer">tab_memory_extension/issues</a>
       </p>
 
-      <h2>Privacy</h2>
+      <h2 data-i18n="privacyTitle">Privacy</h2>
       <p>
-        <a href="/privacy/">Privacy Policy (EN)</a> ·
-        <a href="/privacy/ru.html">Политика конфиденциальности (RU)</a>
+        <a data-lhref="privacy" href="/privacy/" data-i18n="navPrivacy">Privacy Policy</a>
       </p>
 
-      <h2>Chrome Web Store</h2>
-      <p>
-        After publication, use the support link on the extension’s store listing page.
-      </p>
+      <h2 data-i18n="storeTitle">Chrome Web Store</h2>
+      <p data-i18n="storeText">After publication, use the support link on the extension store listing page.</p>
     </main>
 
     <footer class="site-footer">
       <div class="site-footer__inner">
         <p class="site-footer__copy">© Tab Memory</p>
         <nav class="site-footer__links" aria-label="Footer">
-          <a href="/">Home</a>
-          <a href="/privacy/">Privacy</a>
-          <a href="https://github.com/RuslanTsitser/tab_memory_extension" rel="noopener noreferrer">GitHub</a>
+          <a data-lhref="home" href="/" data-i18n="footerHome">Home</a>
+          <a data-lhref="privacy" href="/privacy/" data-i18n="footerPrivacy">Privacy</a>
+          <a href="https://github.com/RuslanTsitser/tab_memory_extension" rel="noopener noreferrer" data-i18n="footerGithub">GitHub</a>
         </nav>
       </div>
     </footer>
+    <script type="module">
+      import { initSiteI18n } from "/js/i18n.js";
+      initSiteI18n("support");
+    </script>
   </body>
 </html>

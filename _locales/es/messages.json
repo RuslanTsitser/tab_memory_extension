@@ -1,0 +1,86 @@
+{
+  "extName": {
+    "message": "Tab Memory"
+  },
+  "extDescription": {
+    "message": "Guarda pestañas con captura de pantalla y nota, luego ciérralas — recupera el contexto en cualquier momento desde el historial local."
+  },
+  "popupTitle": {
+    "message": "Tab Memory"
+  },
+  "noteLabel": {
+    "message": "¿Por qué abriste esta pestaña?"
+  },
+  "notePlaceholder": {
+    "message": "Contexto, tarea, recordatorio…"
+  },
+  "saveTitle": {
+    "message": "Guardar y cerrar pestaña"
+  },
+  "historyTitle": {
+    "message": "Historial"
+  },
+  "saving": {
+    "message": "Guardando captura…"
+  },
+  "saved": {
+    "message": "Pestaña guardada"
+  },
+  "noActiveTab": {
+    "message": "No se encontró ninguna pestaña activa"
+  },
+  "errorSave": {
+    "message": "No se pudo guardar la pestaña. Inténtalo de nuevo."
+  },
+  "errorCannotCapture": {
+    "message": "Esta página no se puede capturar (página interna del navegador)."
+  },
+  "statTabs": {
+    "message": "Pestañas guardadas"
+  },
+  "statStorage": {
+    "message": "Almacenamiento usado"
+  },
+  "sortLabel": {
+    "message": "Ordenar por"
+  },
+  "sortDateDesc": {
+    "message": "Fecha (más reciente)"
+  },
+  "sortDateAsc": {
+    "message": "Fecha (más antigua)"
+  },
+  "sortTitleAsc": {
+    "message": "Título (A–Z)"
+  },
+  "sortTitleDesc": {
+    "message": "Título (Z–A)"
+  },
+  "clearHistory": {
+    "message": "Borrar historial"
+  },
+  "emptyHistory": {
+    "message": "Aún no hay pestañas guardadas. Usa el popup de la extensión para guardar una pestaña."
+  },
+  "noNote": {
+    "message": "Sin nota"
+  },
+  "openTab": {
+    "message": "Abrir pestaña"
+  },
+  "deleteTab": {
+    "message": "Eliminar"
+  },
+  "confirmDelete": {
+    "message": "¿Eliminar esta pestaña guardada?"
+  },
+  "confirmClear": {
+    "message": "¿Eliminar todas las pestañas guardadas y capturas? Esta acción no se puede deshacer."
+  },
+  "deleted": {
+    "message": "Pestaña eliminada"
+  },
+  "cleared": {
+    "message": "Historial borrado"
+  }
+}

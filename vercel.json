@@ -3,6 +3,18 @@
   "buildCommand": "node scripts/prepare-website.mjs",
   "installCommand": "npm install --no-save sharp",
   "outputDirectory": "website",
+  "redirects": [
+    { "source": "/privacy/ru.html", "destination": "/ru/privacy/", "permanent": true },
+    { "source": "/ru/index.html", "destination": "/ru/", "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/:lang(ru|de|es|fr|pt|ja|zh)", "destination": "/index.html" },
+    { "source": "/:lang(ru|de|es|fr|pt|ja|zh)/", "destination": "/index.html" },
+    { "source": "/:lang(ru|de|es|fr|pt|ja|zh)/privacy", "destination": "/privacy/index.html" },
+    { "source": "/:lang(ru|de|es|fr|pt|ja|zh)/privacy/", "destination": "/privacy/index.html" },
+    { "source": "/:lang(ru|de|es|fr|pt|ja|zh)/support", "destination": "/support/index.html" },
+    { "source": "/:lang(ru|de|es|fr|pt|ja|zh)/support/", "destination": "/support/index.html" }
+  ],
   "headers": [
     {
       "source": "/(.*)",

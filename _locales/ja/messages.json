@@ -1,0 +1,86 @@
+{
+  "extName": {
+    "message": "Tab Memory"
+  },
+  "extDescription": {
+    "message": "スクリーンショットとメモ付きでタブを保存して閉じる — ローカル履歴からいつでもコンテキストを復元できます。"
+  },
+  "popupTitle": {
+    "message": "Tab Memory"
+  },
+  "noteLabel": {
+    "message": "このタブを開いた理由は？"
+  },
+  "notePlaceholder": {
+    "message": "コンテキスト、タスク、リマインダー…"
+  },
+  "saveTitle": {
+    "message": "保存してタブを閉じる"
+  },
+  "historyTitle": {
+    "message": "履歴"
+  },
+  "saving": {
+    "message": "スクリーンショットを保存中…"
+  },
+  "saved": {
+    "message": "タブを保存しました"
+  },
+  "noActiveTab": {
+    "message": "アクティブなタブが見つかりません"
+  },
+  "errorSave": {
+    "message": "タブを保存できませんでした。もう一度お試しください。"
+  },
+  "errorCannotCapture": {
+    "message": "このページはキャプチャできません（ブラウザ内部ページ）。"
+  },
+  "statTabs": {
+    "message": "保存済みタブ"
+  },
+  "statStorage": {
+    "message": "使用ストレージ"
+  },
+  "sortLabel": {
+    "message": "並べ替え"
+  },
+  "sortDateDesc": {
+    "message": "日付（新しい順）"
+  },
+  "sortDateAsc": {
+    "message": "日付（古い順）"
+  },
+  "sortTitleAsc": {
+    "message": "タイトル（A–Z）"
+  },
+  "sortTitleDesc": {
+    "message": "タイトル（Z–A）"
+  },
+  "clearHistory": {
+    "message": "履歴を消去"
+  },
+  "emptyHistory": {
+    "message": "保存されたタブはまだありません。拡張機能のポップアップからタブを保存してください。"
+  },
+  "noNote": {
+    "message": "メモなし"
+  },
+  "openTab": {
+    "message": "タブを開く"
+  },
+  "deleteTab": {
+    "message": "削除"
+  },
+  "confirmDelete": {
+    "message": "この保存済みタブを削除しますか？"
+  },
+  "confirmClear": {
+    "message": "保存済みのタブとスクリーンショットをすべて削除しますか？この操作は元に戻せません。"
+  },
+  "deleted": {
+    "message": "タブを削除しました"
+  },
+  "cleared": {
+    "message": "履歴を消去しました"
+  }
+}

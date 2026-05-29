@@ -6,11 +6,11 @@
 
 | Страница | Путь |
 |----------|------|
-| Главная (EN) | `/` |
-| Главная (RU) | `/ru/` |
-| Privacy (EN) | `/privacy/` |
-| Privacy (RU) | `/privacy/ru.html` |
-| Support | `/support/` |
+| Главная | `/` (en), `/ru/`, `/de/`, `/es/`, `/fr/`, `/pt/`, `/ja/`, `/zh/` |
+| Privacy | `/privacy/` (+ префикс языка, напр. `/de/privacy/`) |
+| Support | `/support/` (+ префикс языка) |
+
+Языки сайта: **en**, **ru**, **de**, **es**, **fr**, **pt**, **ja**, **zh** — переключатель в шапке.
 
 **Privacy Policy для Chrome Web Store:** `https://<your-domain>/privacy/`
 

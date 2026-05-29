@@ -1,0 +1,86 @@
+{
+  "extName": {
+    "message": "Tab Memory"
+  },
+  "extDescription": {
+    "message": "Tabs mit Screenshot und Notiz speichern und schließen — Kontext jederzeit aus dem lokalen Verlauf wiederherstellen."
+  },
+  "popupTitle": {
+    "message": "Tab Memory"
+  },
+  "noteLabel": {
+    "message": "Warum hast du diesen Tab geöffnet?"
+  },
+  "notePlaceholder": {
+    "message": "Kontext, Aufgabe, Erinnerung…"
+  },
+  "saveTitle": {
+    "message": "Speichern und Tab schließen"
+  },
+  "historyTitle": {
+    "message": "Verlauf"
+  },
+  "saving": {
+    "message": "Screenshot wird gespeichert…"
+  },
+  "saved": {
+    "message": "Tab gespeichert"
+  },
+  "noActiveTab": {
+    "message": "Kein aktiver Tab gefunden"
+  },
+  "errorSave": {
+    "message": "Tab konnte nicht gespeichert werden. Bitte erneut versuchen."
+  },
+  "errorCannotCapture": {
+    "message": "Diese Seite kann nicht erfasst werden (interne Browserseite)."
+  },
+  "statTabs": {
+    "message": "Gespeicherte Tabs"
+  },
+  "statStorage": {
+    "message": "Speicher belegt"
+  },
+  "sortLabel": {
+    "message": "Sortieren nach"
+  },
+  "sortDateDesc": {
+    "message": "Datum (neueste zuerst)"
+  },
+  "sortDateAsc": {
+    "message": "Datum (älteste zuerst)"
+  },
+  "sortTitleAsc": {
+    "message": "Titel (A–Z)"
+  },
+  "sortTitleDesc": {
+    "message": "Titel (Z–A)"
+  },
+  "clearHistory": {
+    "message": "Verlauf löschen"
+  },
+  "emptyHistory": {
+    "message": "Noch keine gespeicherten Tabs. Verwende das Erweiterungs-Popup, um einen Tab zu speichern."
+  },
+  "noNote": {
+    "message": "Keine Notiz"
+  },
+  "openTab": {
+    "message": "Tab öffnen"
+  },
+  "deleteTab": {
+    "message": "Löschen"
+  },
+  "confirmDelete": {
+    "message": "Diesen gespeicherten Tab löschen?"
+  },
+  "confirmClear": {
+    "message": "Alle gespeicherten Tabs und Screenshots löschen? Dies kann nicht rückgängig gemacht werden."
+  },
+  "deleted": {
+    "message": "Tab gelöscht"
+  },
+  "cleared": {
+    "message": "Verlauf gelöscht"
+  }
+}

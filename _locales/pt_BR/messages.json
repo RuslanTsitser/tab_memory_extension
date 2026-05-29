@@ -1,0 +1,86 @@
+{
+  "extName": {
+    "message": "Tab Memory"
+  },
+  "extDescription": {
+    "message": "Salve abas com captura de tela e anotação, depois feche-as — recupere o contexto a qualquer momento no histórico local."
+  },
+  "popupTitle": {
+    "message": "Tab Memory"
+  },
+  "noteLabel": {
+    "message": "Por que você abriu esta aba?"
+  },
+  "notePlaceholder": {
+    "message": "Contexto, tarefa, lembrete…"
+  },
+  "saveTitle": {
+    "message": "Salvar e fechar aba"
+  },
+  "historyTitle": {
+    "message": "Histórico"
+  },
+  "saving": {
+    "message": "Salvando captura…"
+  },
+  "saved": {
+    "message": "Aba salva"
+  },
+  "noActiveTab": {
+    "message": "Nenhuma aba ativa encontrada"
+  },
+  "errorSave": {
+    "message": "Não foi possível salvar a aba. Tente novamente."
+  },
+  "errorCannotCapture": {
+    "message": "Esta página não pode ser capturada (página interna do navegador)."
+  },
+  "statTabs": {
+    "message": "Abas salvas"
+  },
+  "statStorage": {
+    "message": "Armazenamento usado"
+  },
+  "sortLabel": {
+    "message": "Ordenar por"
+  },
+  "sortDateDesc": {
+    "message": "Data (mais recente)"
+  },
+  "sortDateAsc": {
+    "message": "Data (mais antiga)"
+  },
+  "sortTitleAsc": {
+    "message": "Título (A–Z)"
+  },
+  "sortTitleDesc": {
+    "message": "Título (Z–A)"
+  },
+  "clearHistory": {
+    "message": "Limpar histórico"
+  },
+  "emptyHistory": {
+    "message": "Nenhuma aba salva ainda. Use o popup da extensão para salvar uma aba."
+  },
+  "noNote": {
+    "message": "Sem anotação"
+  },
+  "openTab": {
+    "message": "Abrir aba"
+  },
+  "deleteTab": {
+    "message": "Excluir"
+  },
+  "confirmDelete": {
+    "message": "Excluir esta aba salva?"
+  },
+  "confirmClear": {
+    "message": "Excluir todas as abas salvas e capturas? Esta ação não pode ser desfeita."
+  },
+  "deleted": {
+    "message": "Aba excluída"
+  },
+  "cleared": {
+    "message": "Histórico limpo"
+  }
+}
