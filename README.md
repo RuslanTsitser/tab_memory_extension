@@ -7,7 +7,7 @@ Browser extension (Chrome / Edge / Brave) that saves tabs **with context** — s
 - **Popup:** note field, save & close, open history
 - **Save:** visible-tab screenshot (JPEG), metadata in IndexedDB, tab closed
 - **History page:** count & storage size, sort by date/title, preview cards, open URL, delete one or clear all
-- **Material Design 3** UI (light/dark via system theme)
+- **Adaptive UI** (light/dark via system theme)
 - **i18n:** English and Russian
 
 ## Development
@@ -41,7 +41,7 @@ src/
   history/        Full-tab history UI
   background/     Service worker (save flow)
   lib/            IndexedDB + capture logic
-  styles/         Material Design tokens & components
+  styles/         Shared UI styles and components
 website/
   index.html      Landing (EN)
   ru/index.html   Landing (RU)
