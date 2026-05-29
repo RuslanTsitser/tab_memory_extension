@@ -1,7 +1,7 @@
 import { existsSync, mkdirSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { centerCropSquare, exportRoundedSquareIcon, CORNER_RATIO } from "./icon-utils.mjs";
+import { tightCropSquare, exportRoundedSquareIcon, CORNER_RATIO } from "./icon-utils.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = join(__dirname, "..");
@@ -17,7 +17,7 @@ if (!existsSync(source)) {
 
 mkdirSync(outDir, { recursive: true });
 
-const square = await centerCropSquare(source);
+const square = await tightCropSquare(source);
 
 for (const size of sizes) {
   await exportRoundedSquareIcon(square, join(outDir, `icon-${size}.png`), size);
