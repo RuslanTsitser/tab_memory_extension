@@ -42,7 +42,8 @@ src/
   background/     Service worker (save flow)
   lib/            IndexedDB + capture logic
   styles/         Material Design tokens & components
-public/icons/     Generated PNG icons
+assets/           icon-source.png (original), icon-square.png (cropped)
+icons/            Generated 16–128 PNG icons (npm run build)
 _locales/         en, ru
 ```
 
