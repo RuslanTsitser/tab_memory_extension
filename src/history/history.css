@@ -1,5 +1,6 @@
 body {
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .app {
@@ -12,12 +13,11 @@ body {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 20px 0 16px;
+  padding: 20px 0 12px;
   position: sticky;
   top: 0;
   z-index: 10;
   background: var(--md-sys-color-background);
-  border-bottom: 1px solid color-mix(in srgb, var(--md-sys-color-outline) 30%, transparent);
 }
 
 .top-app-bar h1 {
@@ -30,6 +30,7 @@ body {
   display: flex;
   align-items: stretch;
   gap: 0;
+  margin-top: 20px;
   margin-bottom: 20px;
   padding: 20px 24px;
   border-radius: var(--md-shape-corner-large);

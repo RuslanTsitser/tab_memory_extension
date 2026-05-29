@@ -215,20 +215,26 @@ body {
   position: fixed;
   bottom: 24px;
   left: 50%;
-  transform: translateX(-50%) translateY(120%);
+  transform: translateX(-50%) translateY(calc(100% + 32px));
   padding: 14px 16px;
   border-radius: var(--md-shape-corner-medium);
   background: var(--md-sys-color-on-surface);
   color: var(--md-sys-color-surface);
   font-size: 14px;
   box-shadow: var(--md-elevation-2);
-  transition: transform 0.25s ease;
+  transition: transform 0.25s ease, opacity 0.25s ease, visibility 0.25s;
   z-index: 1000;
   max-width: min(90vw, 400px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .snackbar.visible {
   transform: translateX(-50%) translateY(0);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .snackbar.error {
