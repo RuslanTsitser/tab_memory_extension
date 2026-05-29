@@ -115,6 +115,33 @@ async function createCard(tab: SavedTab): Promise<HTMLElement> {
   title.className = "tab-card__title";
   title.textContent = tab.title;
 
+  const urlRow = document.createElement("div");
+  urlRow.className = "tab-card__url-row";
+
+  const urlEl = document.createElement("span");
+  urlEl.className = "tab-card__url";
+  urlEl.textContent = tab.url;
+  urlEl.title = tab.url;
+
+  const btnCopy = document.createElement("button");
+  btnCopy.type = "button";
+  btnCopy.className = "icon-button icon-button--compact tab-card__copy";
+  btnCopy.title = t("copyUrl");
+  btnCopy.setAttribute("aria-label", t("copyUrl"));
+  btnCopy.innerHTML =
+    '<span class="material-symbols-outlined" aria-hidden="true">content_copy</span>';
+  btnCopy.addEventListener("click", async (e) => {
+    e.stopPropagation();
+    try {
+      await navigator.clipboard.writeText(tab.url);
+      showSnackbar(t("urlCopied"));
+    } catch {
+      showSnackbar(t("errorCopyUrl"), true);
+    }
+  });
+
+  urlRow.append(urlEl, btnCopy);
+
   const meta = document.createElement("p");
   meta.className = "tab-card__meta";
   meta.textContent = formatDate(tab.createdAt);
@@ -128,7 +155,7 @@ async function createCard(tab: SavedTab): Promise<HTMLElement> {
     note.textContent = t("noNote");
   }
 
-  body.append(title, meta, note);
+  body.append(title, urlRow, meta, note);
 
   const footer = document.createElement("div");
   footer.className = "tab-card__footer";

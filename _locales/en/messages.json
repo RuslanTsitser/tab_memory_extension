@@ -82,5 +82,14 @@
   },
   "cleared": {
     "message": "History cleared"
+  },
+  "copyUrl": {
+    "message": "Copy URL"
+  },
+  "urlCopied": {
+    "message": "URL copied"
+  },
+  "errorCopyUrl": {
+    "message": "Could not copy URL"
   }
 }

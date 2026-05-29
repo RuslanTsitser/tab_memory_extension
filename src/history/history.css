@@ -146,6 +146,28 @@ body {
   overflow: hidden;
 }
 
+.tab-card__url-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  min-width: 0;
+}
+
+.tab-card__url {
+  flex: 1;
+  min-width: 0;
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--md-sys-color-link);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tab-card__copy {
+  flex-shrink: 0;
+}
+
 .tab-card__meta {
   margin: 0;
   font-size: 12px;

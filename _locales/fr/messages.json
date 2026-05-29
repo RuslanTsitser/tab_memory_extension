@@ -82,5 +82,14 @@
   },
   "cleared": {
     "message": "Historique effacé"
+  },
+  "copyUrl": {
+    "message": "Copier l’URL"
+  },
+  "urlCopied": {
+    "message": "URL copiée"
+  },
+  "errorCopyUrl": {
+    "message": "Impossible de copier l’URL"
   }
 }

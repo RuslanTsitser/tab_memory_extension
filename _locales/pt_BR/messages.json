@@ -82,5 +82,14 @@
   },
   "cleared": {
     "message": "Histórico limpo"
+  },
+  "copyUrl": {
+    "message": "Copiar URL"
+  },
+  "urlCopied": {
+    "message": "URL copiada"
+  },
+  "errorCopyUrl": {
+    "message": "Não foi possível copiar a URL"
   }
 }

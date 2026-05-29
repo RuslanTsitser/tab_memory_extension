@@ -82,5 +82,14 @@
   },
   "cleared": {
     "message": "История очищена"
+  },
+  "copyUrl": {
+    "message": "Копировать URL"
+  },
+  "urlCopied": {
+    "message": "URL скопирован"
+  },
+  "errorCopyUrl": {
+    "message": "Не удалось скопировать URL"
   }
 }

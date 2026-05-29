@@ -82,5 +82,14 @@
   },
   "cleared": {
     "message": "Verlauf gelöscht"
+  },
+  "copyUrl": {
+    "message": "URL kopieren"
+  },
+  "urlCopied": {
+    "message": "URL kopiert"
+  },
+  "errorCopyUrl": {
+    "message": "URL konnte nicht kopiert werden"
   }
 }

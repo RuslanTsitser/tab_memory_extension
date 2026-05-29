@@ -167,6 +167,15 @@ body {
   color: var(--md-sys-color-on-error-container);
 }
 
+.icon-button--compact {
+  width: 32px;
+  height: 32px;
+}
+
+.icon-button--compact .material-symbols-outlined {
+  font-size: 18px;
+}
+
 .filled-button {
   display: inline-flex;
   align-items: center;

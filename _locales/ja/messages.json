@@ -82,5 +82,14 @@
   },
   "cleared": {
     "message": "履歴を消去しました"
+  },
+  "copyUrl": {
+    "message": "URLをコピー"
+  },
+  "urlCopied": {
+    "message": "URLをコピーしました"
+  },
+  "errorCopyUrl": {
+    "message": "URLをコピーできませんでした"
   }
 }
