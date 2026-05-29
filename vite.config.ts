@@ -1,0 +1,17 @@
+import { resolve } from "node:path";
+import { defineConfig } from "vite";
+import { crx } from "@crxjs/vite-plugin";
+import manifest from "./manifest.config";
+
+export default defineConfig({
+  plugins: [crx({ manifest })],
+  build: {
+    outDir: "dist",
+    emptyOutDir: true,
+    rollupOptions: {
+      input: {
+        history: resolve(__dirname, "src/history/history.html"),
+      },
+    },
+  },
+});

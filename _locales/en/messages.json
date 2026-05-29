@@ -1,0 +1,86 @@
+{
+  "extName": {
+    "message": "Tab Memory"
+  },
+  "extDescription": {
+    "message": "Save tabs with a screenshot and note, then close them — recover context anytime from local history."
+  },
+  "popupTitle": {
+    "message": "Tab Memory"
+  },
+  "noteLabel": {
+    "message": "Why did you open this tab?"
+  },
+  "notePlaceholder": {
+    "message": "Context, task, reminder…"
+  },
+  "saveTitle": {
+    "message": "Save and close tab"
+  },
+  "historyTitle": {
+    "message": "History"
+  },
+  "saving": {
+    "message": "Saving screenshot…"
+  },
+  "saved": {
+    "message": "Tab saved"
+  },
+  "noActiveTab": {
+    "message": "No active tab found"
+  },
+  "errorSave": {
+    "message": "Could not save tab. Try again."
+  },
+  "errorCannotCapture": {
+    "message": "This page cannot be captured (browser internal page)."
+  },
+  "statTabs": {
+    "message": "Saved tabs"
+  },
+  "statStorage": {
+    "message": "Storage used"
+  },
+  "sortLabel": {
+    "message": "Sort by"
+  },
+  "sortDateDesc": {
+    "message": "Date (newest)"
+  },
+  "sortDateAsc": {
+    "message": "Date (oldest)"
+  },
+  "sortTitleAsc": {
+    "message": "Title (A–Z)"
+  },
+  "sortTitleDesc": {
+    "message": "Title (Z–A)"
+  },
+  "clearHistory": {
+    "message": "Clear history"
+  },
+  "emptyHistory": {
+    "message": "No saved tabs yet. Use the extension popup to save a tab."
+  },
+  "noNote": {
+    "message": "No note"
+  },
+  "openTab": {
+    "message": "Open tab"
+  },
+  "deleteTab": {
+    "message": "Delete"
+  },
+  "confirmDelete": {
+    "message": "Delete this saved tab?"
+  },
+  "confirmClear": {
+    "message": "Delete all saved tabs and screenshots? This cannot be undone."
+  },
+  "deleted": {
+    "message": "Tab deleted"
+  },
+  "cleared": {
+    "message": "History cleared"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "tab-memory",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Save browser tabs with context — screenshot, note, and URL — then close them without losing memory.",
+  "type": "module",
+  "scripts": {
+    "postinstall": "node scripts/generate-icons.mjs",
+    "dev": "vite build --watch --mode development",
+    "build": "node scripts/generate-icons.mjs && tsc --noEmit && vite build",
+    "zip": "npm run build && node scripts/zip-dist.mjs"
+  },
+  "devDependencies": {
+    "@crxjs/vite-plugin": "^2.0.0-beta.28",
+    "@types/chrome": "^0.0.268",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.10"
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "extName": {
+    "message": "Tab Memory"
+  },
+  "extDescription": {
+    "message": "Сохраняйте вкладки со скриншотом и заметкой, закрывайте их — контекст всегда под рукой в локальной истории."
+  },
+  "popupTitle": {
+    "message": "Tab Memory"
+  },
+  "noteLabel": {
+    "message": "Зачем вы открыли эту вкладку?"
+  },
+  "notePlaceholder": {
+    "message": "Контекст, задача, напоминание…"
+  },
+  "saveTitle": {
+    "message": "Сохранить и закрыть вкладку"
+  },
+  "historyTitle": {
+    "message": "История"
+  },
+  "saving": {
+    "message": "Сохраняем скриншот…"
+  },
+  "saved": {
+    "message": "Вкладка сохранена"
+  },
+  "noActiveTab": {
+    "message": "Активная вкладка не найдена"
+  },
+  "errorSave": {
+    "message": "Не удалось сохранить. Попробуйте снова."
+  },
+  "errorCannotCapture": {
+    "message": "Эту страницу нельзя снять (системная страница браузера)."
+  },
+  "statTabs": {
+    "message": "Сохранённых вкладок"
+  },
+  "statStorage": {
+    "message": "Занято памяти"
+  },
+  "sortLabel": {
+    "message": "Сортировка"
+  },
+  "sortDateDesc": {
+    "message": "Дата (сначала новые)"
+  },
+  "sortDateAsc": {
+    "message": "Дата (сначала старые)"
+  },
+  "sortTitleAsc": {
+    "message": "Название (А–Я)"
+  },
+  "sortTitleDesc": {
+    "message": "Название (Я–А)"
+  },
+  "clearHistory": {
+    "message": "Очистить историю"
+  },
+  "emptyHistory": {
+    "message": "Пока ничего не сохранено. Откройте расширение на вкладке и нажмите «Сохранить»."
+  },
+  "noNote": {
+    "message": "Без заметки"
+  },
+  "openTab": {
+    "message": "Открыть вкладку"
+  },
+  "deleteTab": {
+    "message": "Удалить"
+  },
+  "confirmDelete": {
+    "message": "Удалить эту сохранённую вкладку?"
+  },
+  "confirmClear": {
+    "message": "Удалить всю историю и все скриншоты? Это нельзя отменить."
+  },
+  "deleted": {
+    "message": "Вкладка удалена"
+  },
+  "cleared": {
+    "message": "История очищена"
+  }
+}

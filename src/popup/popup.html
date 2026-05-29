@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tab Memory</title>
+    <link rel="stylesheet" href="../styles/material.css" />
+    <link rel="stylesheet" href="./popup.css" />
+  </head>
+  <body>
+    <main class="popup">
+      <header class="popup__header">
+        <img class="popup__logo" src="/icons/icon-48.png" alt="" width="28" height="28" />
+        <h1 class="popup__title" data-i18n="popupTitle">Tab Memory</h1>
+      </header>
+
+      <div class="text-field">
+        <label for="note" data-i18n="noteLabel">Why did you open this tab?</label>
+        <textarea
+          id="note"
+          rows="3"
+          maxlength="2000"
+          data-i18n-placeholder="notePlaceholder"
+          placeholder="Context, task, reminder…"
+        ></textarea>
+      </div>
+
+      <p id="tab-preview" class="popup__tab-preview" hidden></p>
+
+      <div class="popup__actions">
+        <button
+          type="button"
+          id="btn-save"
+          class="icon-button filled"
+          title="Save and close tab"
+          data-i18n-title="saveTitle"
+          aria-label="Save and close tab"
+        >
+          <span class="material-symbols-outlined" aria-hidden="true">bookmark_added</span>
+        </button>
+        <button
+          type="button"
+          id="btn-history"
+          class="icon-button"
+          title="History"
+          data-i18n-title="historyTitle"
+          aria-label="History"
+        >
+          <span class="material-symbols-outlined" aria-hidden="true">history</span>
+        </button>
+      </div>
+
+      <p id="status" class="popup__status" role="status" aria-live="polite"></p>
+    </main>
+    <script type="module" src="./popup.ts"></script>
+  </body>
+</html>

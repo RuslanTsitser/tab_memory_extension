@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tab Memory — History</title>
+    <link rel="stylesheet" href="../styles/material.css" />
+    <link rel="stylesheet" href="./history.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="top-app-bar">
+        <img class="top-app-bar__logo" src="/icons/icon-48.png" alt="" width="32" height="32" />
+        <h1 data-i18n="historyTitle">Saved tabs</h1>
+      </header>
+
+      <section class="stats-card" aria-label="Storage statistics">
+        <div class="stats-card__item">
+          <span class="stats-card__value" id="stat-count">0</span>
+          <span class="stats-card__label" data-i18n="statTabs">Saved tabs</span>
+        </div>
+        <div class="stats-card__divider" aria-hidden="true"></div>
+        <div class="stats-card__item">
+          <span class="stats-card__value" id="stat-size">0 B</span>
+          <span class="stats-card__label" data-i18n="statStorage">Storage used</span>
+        </div>
+      </section>
+
+      <div class="toolbar">
+        <div class="text-field toolbar__sort">
+          <label for="sort" data-i18n="sortLabel">Sort by</label>
+          <select id="sort">
+            <option value="createdAt-desc" data-i18n="sortDateDesc">Date (newest)</option>
+            <option value="createdAt-asc" data-i18n="sortDateAsc">Date (oldest)</option>
+            <option value="title-asc" data-i18n="sortTitleAsc">Title (A–Z)</option>
+            <option value="title-desc" data-i18n="sortTitleDesc">Title (Z–A)</option>
+          </select>
+        </div>
+        <button type="button" id="btn-clear" class="outlined-button" data-i18n="clearHistory">
+          Clear history
+        </button>
+      </div>
+
+      <div id="list" class="tab-list" role="list"></div>
+
+      <div id="empty" class="empty-state" hidden>
+        <span class="material-symbols-outlined empty-state__icon" aria-hidden="true">inbox</span>
+        <p data-i18n="emptyHistory">No saved tabs yet. Use the extension popup to save a tab.</p>
+      </div>
+    </div>
+
+    <div id="snackbar" class="snackbar" role="status" aria-live="polite"></div>
+
+    <script type="module" src="./history.ts"></script>
+  </body>
+</html>
