@@ -1,7 +1,7 @@
 import { existsSync, mkdirSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import sharp from "sharp";
+import { exportRoundedSquareFromFile } from "./icon-utils.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const assetsDir = join(root, "assets");
@@ -26,31 +26,13 @@ for (const { source, out, size } of [...logos, ...favicons]) {
     console.error(`Missing ${input}`);
     process.exit(1);
   }
-  await exportSquareLogo(input, join(websiteDir, out), size);
+  await exportRoundedSquareFromFile(input, join(websiteDir, out), size);
 }
 
-// Fallback for browsers that ignore media queries on favicons
-await exportSquareLogo(
+await exportRoundedSquareFromFile(
   join(assetsDir, "tab_memory_icon_light.png"),
   join(websiteDir, "icon.png"),
   32,
 );
 
-console.log("website favicons and logos ready");
-
-async function exportSquareLogo(input, output, size) {
-  const meta = await sharp(input).metadata();
-  if (!meta.width || !meta.height) {
-    throw new Error(`Could not read size of ${input}`);
-  }
-
-  const side = Math.min(meta.width, meta.height);
-  const left = Math.floor((meta.width - side) / 2);
-  const top = Math.floor((meta.height - side) / 2);
-
-  await sharp(input)
-    .extract({ left, top, width: side, height: side })
-    .resize(size, size)
-    .png()
-    .toFile(output);
-}
+console.log("website favicons and logos ready (rounded corners)");
