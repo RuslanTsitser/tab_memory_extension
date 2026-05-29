@@ -4,7 +4,7 @@ import sharp from "sharp";
 export const CORNER_RATIO = 0.2;
 
 /** Extra space around detected logo content (fraction of content size, each side). */
-export const CONTENT_PADDING_RATIO = 0.04;
+export const CONTENT_PADDING_RATIO = 0.1;
 
 export async function detectContentBounds(input) {
   const { data, info } = await sharp(input).raw().toBuffer({ resolveWithObject: true });
