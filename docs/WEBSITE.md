@@ -2,17 +2,19 @@
 
 Статический лендинг в `website/` — описание расширения, privacy, support.
 
-## URL (после деплоя)
+## Production URL
 
-| Страница | Путь |
-|----------|------|
-| Главная | `/` (en), `/ru/`, `/de/`, `/es/`, `/fr/`, `/pt/`, `/ja/`, `/zh/` |
-| Privacy | `/privacy/` (+ префикс языка, напр. `/de/privacy/`) |
-| Support | `/support/` (+ префикс языка) |
+**https://tab-memory.tsitser.com**
+
+| Страница | URL |
+|----------|-----|
+| Главная | https://tab-memory.tsitser.com/ (en), `/ru/`, `/de/`, `/es/`, `/fr/`, `/pt/`, `/ja/`, `/zh/` |
+| Privacy | https://tab-memory.tsitser.com/privacy/ (+ префикс языка, напр. `/de/privacy/`) |
+| Support | https://tab-memory.tsitser.com/support/ (+ префикс языка) |
 
 Языки сайта: **en**, **ru**, **de**, **es**, **fr**, **pt**, **ja**, **zh** — переключатель в шапке.
 
-**Privacy Policy для Chrome Web Store:** `https://<your-domain>/privacy/`
+**Privacy Policy для Chrome Web Store:** https://tab-memory.tsitser.com/privacy/
 
 ## Автодеплой (Vercel + GitHub)
 
@@ -50,11 +52,6 @@ Vercel → **Settings → Git** — репозиторий должен быть
 npm run website:preview
 ```
 
-## Кастомный домен
+## Домен
 
-Vercel → Project → **Settings → Domains** → добавить домен.
-
-Укажите его в Chrome Web Store:
-
-- Privacy: `https://<домен>/privacy/`
-- Homepage: `https://<домен>/`
+Production: **tab-memory.tsitser.com** (Vercel → Settings → Domains).

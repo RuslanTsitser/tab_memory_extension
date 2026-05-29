@@ -29,7 +29,7 @@ npm run zip      # build + tab-memory-extension.zip for the store
 
 1. Run `npm run zip` and upload `tab-memory-extension.zip`
 2. Prepare assets: 128×128 icon, 1280×800 screenshots (popup + history)
-3. Link **Privacy policy** — use `PRIVACY.md` (host on GitHub Pages or your site)
+3. Link **Privacy policy:** https://tab-memory.tsitser.com/privacy/
 4. Declare: **No remote code**, single purpose (“save tabs locally with context”), permissions justified in listing
 5. Category suggestion: **Productivity**
 
@@ -57,4 +57,4 @@ MIT
 
 ## Website
 
-Marketing site and privacy policy: `website/` → deploy to Vercel. See [docs/WEBSITE.md](./docs/WEBSITE.md).
+**https://tab-memory.tsitser.com** — landing, privacy, support (source in `website/`, deploy via Vercel). See [docs/WEBSITE.md](./docs/WEBSITE.md).

@@ -4,12 +4,13 @@
 
 Лендинг в `website/` деплоится на **Vercel** (см. [WEBSITE.md](./WEBSITE.md)).
 
-После деплоя укажите в карточке стора:
+Укажите в карточке стора:
 
 | Поле | URL |
 |------|-----|
-| Privacy Policy | `https://<ваш-домен>/privacy/` |
-| Homepage (опционально) | `https://<ваш-домен>/` |
+| Privacy Policy | https://tab-memory.tsitser.com/privacy/ |
+| Homepage | https://tab-memory.tsitser.com/ |
+| Support | https://tab-memory.tsitser.com/support/ |
 
 ## Чеклист
 
