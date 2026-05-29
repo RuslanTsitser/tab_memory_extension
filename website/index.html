@@ -14,14 +14,17 @@
       content="Close cluttered tabs without forgetting why you opened them."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="/logo.png" />
+    <meta property="og:image" content="/logo-dark.png" />
     <link rel="icon" href="/icon.png" type="image/png" />
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
     <header class="site-header">
       <a class="site-header__brand" href="/">
-        <img src="/logo.png" alt="" width="32" height="32" />
+        <picture>
+          <source srcset="/logo-light.png" media="(prefers-color-scheme: light)" />
+          <img src="/logo-dark.png" alt="" width="32" height="32" />
+        </picture>
         Tab Memory
       </a>
       <nav class="site-nav" aria-label="Main">
@@ -35,7 +38,10 @@
 
     <section class="hero">
       <div class="container">
-        <img class="hero__icon" src="/logo.png" alt="Tab Memory" width="112" height="112" />
+        <picture>
+          <source srcset="/logo-light.png" media="(prefers-color-scheme: light)" />
+          <img class="hero__icon" src="/logo-dark.png" alt="Tab Memory" width="112" height="112" />
+        </picture>
         <h1>Close tabs.<br />Keep the context.</h1>
         <p class="hero__lead">
           Tab Memory saves a screenshot, your note, URL, and page title — then closes the
@@ -156,7 +162,10 @@
         <div class="mock" aria-hidden="true">
           <div class="mock__inner">
             <div class="mock__header">
-              <img src="/logo.png" alt="" width="24" height="24" style="border-radius: 6px" />
+              <picture>
+                <source srcset="/logo-light.png" media="(prefers-color-scheme: light)" />
+                <img src="/logo-dark.png" alt="" width="24" height="24" style="border-radius: 6px" />
+              </picture>
               Tab Memory
             </div>
             <div class="mock__field">

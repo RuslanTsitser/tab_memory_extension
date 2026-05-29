@@ -14,7 +14,10 @@
   <body>
     <header class="site-header">
       <a class="site-header__brand" href="/ru/">
-        <img src="/logo.png" alt="" width="32" height="32" />
+        <picture>
+          <source srcset="/logo-light.png" media="(prefers-color-scheme: light)" />
+          <img src="/logo-dark.png" alt="" width="32" height="32" />
+        </picture>
         Tab Memory
       </a>
       <nav class="site-nav" aria-label="Main">
@@ -28,7 +31,10 @@
 
     <section class="hero">
       <div class="container">
-        <img class="hero__icon" src="/logo.png" alt="Tab Memory" width="112" height="112" />
+        <picture>
+          <source srcset="/logo-light.png" media="(prefers-color-scheme: light)" />
+          <img class="hero__icon" src="/logo-dark.png" alt="Tab Memory" width="112" height="112" />
+        </picture>
         <h1>Закройте вкладки.<br />Сохраните контекст.</h1>
         <p class="hero__lead">
           Tab Memory делает скриншот, сохраняет заметку, URL и заголовок страницы — и закрывает

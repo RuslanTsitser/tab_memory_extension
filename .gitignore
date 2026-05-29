@@ -4,7 +4,8 @@ icons/
 public/
 .vercel
 website/icon.png
-website/logo.png
+website/logo-dark.png
+website/logo-light.png
 assets/logo-square.png
 *.zip
 .DS_Store
