@@ -30,4 +30,4 @@ This data is **not synced** to our servers or third parties. Uninstalling the ex
 
 ## Contact
 
-For questions about this policy, open an issue in the project repository or contact the developer listed on the Chrome Web Store listing.
+For questions about this policy, email **tab-memory@tsitser.com**, visit [Support](https://tab-memory.tsitser.com/support/), or open an issue in the project repository.

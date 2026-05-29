@@ -99,13 +99,15 @@
     "perm3": "Снимок и повторное открытие любых сайтов, которые вы сами сохраняете",
     "perm4": "Локальное хранение скриншотов и метаданных",
     "contactTitle": "Контакты",
-    "contactText": "По вопросам политики см. страницу Поддержка или GitHub Issues."
+    "contactText": "По вопросам политики: tab-memory@tsitser.com, страница Поддержка или GitHub Issues."
   },
   "support": {
     "metaTitle": "Поддержка — Tab Memory",
     "metaDescription": "Поддержка и контакты по расширению Tab Memory.",
     "title": "Поддержка",
     "lead": "Вопросы, ошибки и отзывы о Tab Memory.",
+    "emailTitle": "Email",
+    "emailText": "Поддержка и вопросы по конфиденциальности:",
     "githubTitle": "GitHub",
     "githubText": "Сообщайте об ошибках и предложениях в GitHub Issues.",
     "privacyTitle": "Конфиденциальность",

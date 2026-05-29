@@ -27,11 +27,9 @@ npm run zip      # build + tab-memory-extension.zip for the store
 
 ## Publish to Chrome Web Store
 
-1. Run `npm run zip` and upload `tab-memory-extension.zip`
-2. Prepare assets: 128×128 icon, 1280×800 screenshots (popup + history)
-3. Link **Privacy policy:** https://tab-memory.tsitser.com/privacy/
-4. Declare: **No remote code**, single purpose (“save tabs locally with context”), permissions justified in listing
-5. Category suggestion: **Productivity**
+See **[docs/STORE.md](./docs/STORE.md)** — English listing text, permission justifications, data usage answers, screenshot guide, and manual test checklist.
+
+Quick steps: `npm run zip` → upload `tab-memory-extension.zip` → privacy URL https://tab-memory.tsitser.com/privacy/ → support email tab-memory@tsitser.com
 
 ## Project structure
 

@@ -99,13 +99,15 @@
     "perm3": "保存を選んだ任意のサイトのスクリーンショットと再オープン",
     "perm4": "スクリーンショットとメタデータのローカル保存",
     "contactTitle": "お問い合わせ",
-    "contactText": "本ポリシーに関する質問は、サポートページまたはGitHub Issuesをご覧ください。"
+    "contactText": "本ポリシーに関する質問は tab-memory@tsitser.com、サポートページ、または GitHub Issues まで。"
   },
   "support": {
     "metaTitle": "サポート — Tab Memory",
     "metaDescription": "Tab Memoryブラウザ拡張のサポートと連絡先。",
     "title": "サポート",
     "lead": "Tab Memoryに関する質問、不具合、フィードバック。",
+    "emailTitle": "メール",
+    "emailText": "サポートとプライバシーに関するお問い合わせ：",
     "githubTitle": "GitHub",
     "githubText": "問題と機能リクエストはGitHub Issuesで報告してください。",
     "privacyTitle": "プライバシー",

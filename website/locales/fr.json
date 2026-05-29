@@ -99,13 +99,15 @@
     "perm3": "Capture et réouverture sur tout site que vous choisissez d’enregistrer",
     "perm4": "Stocker captures et métadonnées localement",
     "contactTitle": "Contact",
-    "contactText": "Pour toute question sur cette politique, consultez la page Assistance ou GitHub Issues."
+    "contactText": "Pour toute question sur cette politique : tab-memory@tsitser.com, page Assistance ou GitHub Issues."
   },
   "support": {
     "metaTitle": "Assistance — Tab Memory",
     "metaDescription": "Assistance et contact pour l’extension Tab Memory.",
     "title": "Assistance",
     "lead": "Questions, bugs ou retours sur Tab Memory.",
+    "emailTitle": "E-mail",
+    "emailText": "Assistance et questions de confidentialité :",
     "githubTitle": "GitHub",
     "githubText": "Signalez les problèmes et demandes de fonctionnalités sur GitHub Issues.",
     "privacyTitle": "Confidentialité",
