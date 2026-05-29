@@ -26,6 +26,7 @@
    - **Root Directory:** `.` (корень репозитория)
    - **Framework Preset:** Other
    - **Build Command:** `node scripts/prepare-website.mjs` (из `vercel.json`)
+   - **Install Command:** `npm install --no-save sharp` (генерация logo/icon на Linux)
    - **Output Directory:** `website`
 4. Нажмите **Deploy**
 

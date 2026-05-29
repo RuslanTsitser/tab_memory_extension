@@ -1,7 +1,7 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "buildCommand": "node scripts/prepare-website.mjs",
-  "installCommand": "",
+  "installCommand": "npm install --no-save sharp",
   "outputDirectory": "website",
   "headers": [
     {
