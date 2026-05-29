@@ -42,7 +42,11 @@ src/
   background/     Service worker (save flow)
   lib/            IndexedDB + capture logic
   styles/         Material Design tokens & components
-assets/           icon-source.png (original), icon-square.png (cropped)
+website/
+  index.html      Landing (EN)
+  ru/index.html   Landing (RU)
+  privacy/        Privacy policy
+  support/        Support
 icons/            Generated 16–128 PNG icons (npm run build)
 _locales/         en, ru
 ```
@@ -50,3 +54,7 @@ _locales/         en, ru
 ## License
 
 MIT
+
+## Website
+
+Marketing site and privacy policy: `website/` → deploy to Vercel. See [docs/WEBSITE.md](./docs/WEBSITE.md).

@@ -8,7 +8,9 @@
     "postinstall": "node scripts/generate-icons.mjs",
     "dev": "vite build --watch --mode development",
     "build": "node scripts/generate-icons.mjs && tsc --noEmit && vite build",
-    "zip": "npm run build && node scripts/zip-dist.mjs"
+    "zip": "npm run build && node scripts/zip-dist.mjs",
+    "website:prepare": "node scripts/prepare-website.mjs",
+    "website:preview": "npm run website:prepare && npx --yes serve website"
   },
   "devDependencies": {
     "@crxjs/vite-plugin": "^2.0.0-beta.28",

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tab Memory — Save browser tabs with context</title>
+    <meta
+      name="description"
+      content="Chrome extension: save tabs with a screenshot and note, close them without losing context. 100% local storage."
+    />
+    <meta property="og:title" content="Tab Memory" />
+    <meta
+      property="og:description"
+      content="Close cluttered tabs without forgetting why you opened them."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="/icon.png" type="image/png" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="site-header__brand" href="/">
+        <img src="/icon.png" alt="" width="32" height="32" />
+        Tab Memory
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="/support/">Support</a>
+        <a class="lang-pill" href="/ru/" hreflang="ru">RU</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="container">
+        <img class="hero__icon" src="/icon.png" alt="Tab Memory" width="112" height="112" />
+        <h1>Close tabs.<br />Keep the context.</h1>
+        <p class="hero__lead">
+          Tab Memory saves a screenshot, your note, URL, and page title — then closes the
+          tab. No more tab hoarding. No more forgotten bookmarks.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--filled" href="#how-it-works">
+            <span class="material-symbols-outlined" aria-hidden="true">play_arrow</span>
+            See how it works
+          </a>
+          <a class="btn btn--outlined" href="/privacy/">Privacy Policy</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container">
+        <h2 class="section__title">The problem with too many tabs</h2>
+        <p class="section__subtitle">
+          You want a clean browser, but closing tabs feels risky. Ordinary bookmarks pile up
+          and you forget why you saved them.
+        </p>
+        <div class="compare">
+          <article class="compare__card compare__card--bad">
+            <h3>Without Tab Memory</h3>
+            <ul>
+              <li>Dozens of open tabs slow you down</li>
+              <li>Closing = losing context forever</li>
+              <li>Bookmarks without “why” become useless</li>
+            </ul>
+          </article>
+          <article class="compare__card compare__card--good">
+            <h3>With Tab Memory</h3>
+            <ul>
+              <li>Save &amp; close in one click</li>
+              <li>Screenshot + note = full context</li>
+              <li>Reopen anytime from local history</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="container">
+        <h2 class="section__title">Everything you need</h2>
+        <p class="section__subtitle">Built for researchers, developers, and tab hoarders.</p>
+        <div class="features">
+          <article class="feature">
+            <div class="feature__icon">
+              <span class="material-symbols-outlined" aria-hidden="true">photo_camera</span>
+            </div>
+            <h3>Visual snapshot</h3>
+            <p>Captures what was on screen when you saved — not just a favicon and title.</p>
+          </article>
+          <article class="feature">
+            <div class="feature__icon">
+              <span class="material-symbols-outlined" aria-hidden="true">edit_note</span>
+            </div>
+            <h3>Your note</h3>
+            <p>Write why you opened the tab: task, quote, reminder — up to 2000 characters.</p>
+          </article>
+          <article class="feature">
+            <div class="feature__icon">
+              <span class="material-symbols-outlined" aria-hidden="true">tab_close</span>
+            </div>
+            <h3>Save &amp; close</h3>
+            <p>One action: store everything locally and close the tab immediately.</p>
+          </article>
+          <article class="feature">
+            <div class="feature__icon">
+              <span class="material-symbols-outlined" aria-hidden="true">history</span>
+            </div>
+            <h3>History page</h3>
+            <p>Browse saved tabs with previews. Sort by date or title. Open or delete.</p>
+          </article>
+          <article class="feature">
+            <div class="feature__icon">
+              <span class="material-symbols-outlined" aria-hidden="true">devices</span>
+            </div>
+            <h3>100% local</h3>
+            <p>No account, no cloud, no sync. Data stays in your browser’s IndexedDB.</p>
+          </article>
+          <article class="feature">
+            <div class="feature__icon">
+              <span class="material-symbols-outlined" aria-hidden="true">dark_mode</span>
+            </div>
+            <h3>Material Design</h3>
+            <p>Clean UI that follows your system light/dark theme.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="how-it-works">
+      <div class="container">
+        <h2 class="section__title">How it works</h2>
+        <p class="section__subtitle">Three seconds to save a tab with full context.</p>
+        <div class="steps">
+          <article class="step">
+            <h3>Open the popup</h3>
+            <p>Click the Tab Memory icon on any tab you want to save.</p>
+          </article>
+          <article class="step">
+            <h3>Add a note</h3>
+            <p>Optionally describe why this tab matters — future you will thank you.</p>
+          </article>
+          <article class="step">
+            <h3>Save &amp; close</h3>
+            <p>Screenshot is stored, metadata saved, tab closed. Done.</p>
+          </article>
+          <article class="step">
+            <h3>Return from history</h3>
+            <p>Open History, find the preview, click to reopen the URL in a new tab.</p>
+          </article>
+        </div>
+
+        <div class="mock" aria-hidden="true">
+          <div class="mock__inner">
+            <div class="mock__header">
+              <img src="/icon.png" alt="" width="24" height="24" style="border-radius: 6px" />
+              Tab Memory
+            </div>
+            <div class="mock__field">
+              <span class="mock__label">Why did you open this tab?</span>
+              <div class="mock__textarea">Compare pricing models for Q2 report…</div>
+            </div>
+            <div class="mock__actions">
+              <div class="mock__btn">
+                <span class="material-symbols-outlined">bookmark_added</span>
+              </div>
+              <div class="mock__btn" style="background: transparent; color: var(--on-surface-variant)">
+                <span class="material-symbols-outlined">history</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section__title">History at a glance</h2>
+        <p class="section__subtitle">Your personal tab archive — stored only on this device.</p>
+        <div class="features">
+          <article class="feature">
+            <div class="feature__icon">
+              <span class="material-symbols-outlined" aria-hidden="true">grid_view</span>
+            </div>
+            <h3>Card grid with previews</h3>
+            <p>Each saved tab shows its screenshot, title, date, and note.</p>
+          </article>
+          <article class="feature">
+            <div class="feature__icon">
+              <span class="material-symbols-outlined" aria-hidden="true">sort</span>
+            </div>
+            <h3>Sort &amp; filter</h3>
+            <p>Order by date (newest/oldest) or title (A–Z / Z–A).</p>
+          </article>
+          <article class="feature">
+            <div class="feature__icon">
+              <span class="material-symbols-outlined" aria-hidden="true">storage</span>
+            </div>
+            <h3>Storage stats</h3>
+            <p>See how many tabs you saved and how much disk space they use.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container">
+        <h2 class="section__title">FAQ</h2>
+        <div class="faq">
+          <details>
+            <summary>Does Tab Memory sync across devices?</summary>
+            <p>
+              No. Everything is stored locally in your browser. We intentionally avoid
+              cloud sync to keep your browsing context private.
+            </p>
+          </details>
+          <details>
+            <summary>What data is stored?</summary>
+            <p>
+              Screenshot (JPEG), page URL, page title, your note, and save timestamp. Nothing
+              is sent to any server.
+            </p>
+          </details>
+          <details>
+            <summary>Can I save chrome:// pages?</summary>
+            <p>
+              No. Browser internal pages cannot be captured for security reasons. Regular web
+              pages work fine.
+            </p>
+          </details>
+          <details>
+            <summary>How do I delete everything?</summary>
+            <p>
+              Open History and click “Clear history”, or uninstall the extension. Both remove
+              local data from IndexedDB.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="privacy-cta">
+          <h2>Your data stays on your device</h2>
+          <p>
+            Tab Memory collects nothing. No analytics, no accounts, no third-party sharing.
+            Read the full policy for Chrome Web Store compliance.
+          </p>
+          <a class="btn btn--filled" href="/privacy/">Read Privacy Policy</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <p class="site-footer__copy">© Tab Memory · Local-first browser extension</p>
+        <nav class="site-footer__links" aria-label="Footer">
+          <a href="/privacy/">Privacy</a>
+          <a href="/privacy/ru.html">Privacy (RU)</a>
+          <a href="/support/">Support</a>
+          <a href="https://github.com/RuslanTsitser/tab_memory_extension" rel="noopener noreferrer">GitHub</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

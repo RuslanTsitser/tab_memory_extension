@@ -1,9 +1,20 @@
 # Публикация в Chrome Web Store
 
+## Сайт и Privacy Policy
+
+Лендинг в `website/` деплоится на **Vercel** (см. [WEBSITE.md](./WEBSITE.md)).
+
+После деплоя укажите в карточке стора:
+
+| Поле | URL |
+|------|-----|
+| Privacy Policy | `https://<ваш-домен>/privacy/` |
+| Homepage (опционально) | `https://<ваш-домен>/` |
+
 ## Чеклист
 
 - [ ] `npm run zip` → загрузить `tab-memory-extension.zip`
-- [ ] Опубликовать `PRIVACY.md` (GitHub Pages / свой сайт) и указать URL в карточке
+- [ ] Сайт задеплоен на Vercel, privacy доступен по HTTPS
 - [ ] Скриншоты: 1280×800 или 640×400 (popup + страница истории)
 - [ ] Промо: маленький тайл 440×280, по желанию — marquee 1400×560
 - [ ] Категория: **Productivity**

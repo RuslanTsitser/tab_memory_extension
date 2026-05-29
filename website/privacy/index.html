@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy — Tab Memory</title>
+    <meta name="description" content="Privacy Policy for the Tab Memory browser extension." />
+    <link rel="icon" href="/icon.png" type="image/png" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="site-header__brand" href="/">
+        <img src="/icon.png" alt="" width="32" height="32" />
+        Tab Memory
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="/#features">Features</a>
+        <a href="/privacy/" aria-current="page">Privacy</a>
+        <a href="/support/">Support</a>
+        <a class="lang-pill" href="/ru/">RU</a>
+      </nav>
+    </header>
+
+    <main class="page-main">
+      <nav class="lang-switch" aria-label="Language">
+        <a href="/privacy/" aria-current="true">English</a>
+        <a href="/privacy/ru.html">Русский</a>
+      </nav>
+
+      <h1>Privacy Policy</h1>
+      <p class="meta">Last updated: May 29, 2026</p>
+
+      <p>
+        Tab Memory is a browser extension that helps you save open tabs with a screenshot
+        and a short note before closing them.
+      </p>
+
+      <h2>Data we collect</h2>
+      <p><strong>None.</strong> Tab Memory does not collect, transmit, or sell any personal data.</p>
+
+      <h2>Data stored on your device</h2>
+      <p>
+        All information stays <strong>only on your computer</strong> in the browser’s local
+        storage (IndexedDB):
+      </p>
+      <ul>
+        <li>Screenshot of the tab at save time</li>
+        <li>Page URL and title</li>
+        <li>Your note</li>
+        <li>Date and time of save</li>
+      </ul>
+      <p>
+        This data is <strong>not synced</strong> to our servers or third parties.
+        Uninstalling the extension or using “Clear history” removes saved data from your
+        browser.
+      </p>
+
+      <h2>Permissions</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Permission</th>
+            <th>Why</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>activeTab</code></td>
+            <td>Capture a screenshot when you click “Save”</td>
+          </tr>
+          <tr>
+            <td><code>tabs</code></td>
+            <td>Read tab title/URL, close the tab, open history and saved URLs</td>
+          </tr>
+          <tr>
+            <td><code>&lt;all_urls&gt;</code></td>
+            <td>Screenshot and reopen pages on any site you choose to save</td>
+          </tr>
+          <tr>
+            <td><code>storage</code> / <code>unlimitedStorage</code></td>
+            <td>Store screenshots and metadata locally</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Contact</h2>
+      <p>
+        For questions about this policy, see the
+        <a href="/support/">Support</a> page or
+        <a href="https://github.com/RuslanTsitser/tab_memory_extension/issues" rel="noopener noreferrer">GitHub Issues</a>.
+      </p>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <p class="site-footer__copy">© Tab Memory</p>
+        <nav class="site-footer__links" aria-label="Footer">
+          <a href="/">Home</a>
+          <a href="/privacy/ru.html">Privacy (RU)</a>
+          <a href="/support/">Support</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
