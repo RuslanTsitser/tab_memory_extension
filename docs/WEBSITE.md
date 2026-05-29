@@ -25,7 +25,8 @@
 3. Настройки проекта:
    - **Root Directory:** `.` (корень репозитория)
    - **Framework Preset:** Other
-   - Build/install команды Vercel подхватит из `vercel.json` (`outputDirectory: website`)
+   - **Build Command:** `node scripts/prepare-website.mjs` (из `vercel.json`)
+   - **Output Directory:** `website`
 4. Нажмите **Deploy**
 
 После этого production обновляется при каждом merge/push в `main`.
