@@ -91,5 +91,20 @@
   },
   "errorCopyUrl": {
     "message": "Não foi possível copiar a URL"
+  },
+  "viewModeLabel": {
+    "message": "Visualização"
+  },
+  "viewGrid": {
+    "message": "Grade"
+  },
+  "viewCompact": {
+    "message": "Compacto"
+  },
+  "viewPreview": {
+    "message": "Ver captura"
+  },
+  "closePreview": {
+    "message": "Fechar"
   }
 }

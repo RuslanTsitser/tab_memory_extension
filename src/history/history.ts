@@ -8,16 +8,29 @@ import {
 } from "../lib/db";
 import type { SavedTab, SortDirection, SortField } from "../lib/types";
 
+const VIEW_STORAGE_KEY = "historyViewMode";
+
+type ViewMode = "grid" | "compact";
+
 const statCountEl = document.getElementById("stat-count") as HTMLSpanElement;
 const statSizeEl = document.getElementById("stat-size") as HTMLSpanElement;
 const listEl = document.getElementById("list") as HTMLDivElement;
 const emptyEl = document.getElementById("empty") as HTMLDivElement;
 const sortEl = document.getElementById("sort") as HTMLSelectElement;
 const btnClear = document.getElementById("btn-clear") as HTMLButtonElement;
+const btnViewGrid = document.getElementById("view-grid") as HTMLButtonElement;
+const btnViewCompact = document.getElementById("view-compact") as HTMLButtonElement;
 const snackbarEl = document.getElementById("snackbar") as HTMLDivElement;
+const previewDialog = document.getElementById("preview-dialog") as HTMLDialogElement;
+const previewTitleEl = document.getElementById("preview-title") as HTMLHeadingElement;
+const previewImageEl = document.getElementById("preview-image") as HTMLImageElement;
+const previewOpenEl = document.getElementById("preview-open") as HTMLButtonElement;
+const previewCloseEl = document.getElementById("preview-close") as HTMLButtonElement;
 
 const objectUrls = new Set<string>();
 let snackbarTimer: ReturnType<typeof setTimeout> | undefined;
+let viewMode: ViewMode = "grid";
+let previewTab: SavedTab | null = null;
 
 function t(key: string): string {
   return chrome.i18n.getMessage(key) || key;
@@ -27,6 +40,13 @@ function applyI18n(): void {
   document.querySelectorAll<HTMLElement>("[data-i18n]").forEach((el) => {
     const key = el.dataset.i18n;
     if (key) el.textContent = t(key);
+  });
+  document.querySelectorAll<HTMLElement>("[data-i18n-title]").forEach((el) => {
+    const key = el.dataset.i18nTitle;
+    if (!key) return;
+    const label = t(key);
+    el.title = label;
+    if (el.hasAttribute("aria-label")) el.setAttribute("aria-label", label);
   });
 }
 
@@ -57,6 +77,42 @@ function revokeObjectUrls(): void {
   objectUrls.clear();
 }
 
+function applyViewMode(): void {
+  listEl.classList.toggle("tab-list--compact", viewMode === "compact");
+  for (const card of listEl.querySelectorAll(".tab-card")) {
+    card.classList.toggle("tab-card--compact", viewMode === "compact");
+  }
+  btnViewGrid.classList.toggle("is-active", viewMode === "grid");
+  btnViewCompact.classList.toggle("is-active", viewMode === "compact");
+  btnViewGrid.setAttribute("aria-pressed", String(viewMode === "grid"));
+  btnViewCompact.setAttribute("aria-pressed", String(viewMode === "compact"));
+}
+
+async function loadViewMode(): Promise<void> {
+  const stored = (await chrome.storage.local.get(VIEW_STORAGE_KEY))[VIEW_STORAGE_KEY];
+  if (stored === "grid" || stored === "compact") viewMode = stored;
+  applyViewMode();
+}
+
+async function setViewMode(mode: ViewMode): Promise<void> {
+  if (mode === viewMode) return;
+  viewMode = mode;
+  await chrome.storage.local.set({ [VIEW_STORAGE_KEY]: mode });
+  applyViewMode();
+}
+
+function openPreviewDialog(tab: SavedTab, imageUrl: string | undefined): void {
+  previewTab = tab;
+  previewTitleEl.textContent = tab.title;
+  if (imageUrl) {
+    previewImageEl.src = imageUrl;
+  } else {
+    previewImageEl.removeAttribute("src");
+  }
+  previewImageEl.alt = tab.title;
+  previewDialog.showModal();
+}
+
 async function refreshStats(): Promise<void> {
   const stats = await getStorageStats();
   statCountEl.textContent = String(stats.count);
@@ -79,34 +135,45 @@ async function renderList(): Promise<void> {
   for (const tab of tabs) {
     listEl.appendChild(await createCard(tab));
   }
+
+  applyViewMode();
 }
 
 async function createCard(tab: SavedTab): Promise<HTMLElement> {
   const card = document.createElement("article");
   card.className = "tab-card";
+  if (viewMode === "compact") card.classList.add("tab-card--compact");
   card.setAttribute("role", "listitem");
 
-  const previewBtn = document.createElement("button");
-  previewBtn.type = "button";
-  previewBtn.className = "tab-card__preview";
-  previewBtn.setAttribute(
-    "aria-label",
-    `${t("openTab")}: ${tab.title}`,
-  );
-
-  const img = document.createElement("img");
-  img.alt = "";
   const screenshotUrl = await getScreenshotUrl(tab.screenshotKey);
-  if (screenshotUrl) {
-    objectUrls.add(screenshotUrl);
-    img.src = screenshotUrl;
-  }
-  previewBtn.appendChild(img);
+  if (screenshotUrl) objectUrls.add(screenshotUrl);
 
   const openTab = (): void => {
     void chrome.tabs.create({ url: tab.url });
   };
-  previewBtn.addEventListener("click", openTab);
+
+  const previewBtn = document.createElement("button");
+  previewBtn.type = "button";
+  previewBtn.className = "tab-card__preview";
+  previewBtn.setAttribute("aria-label", `${t("viewPreview")}: ${tab.title}`);
+
+  const img = document.createElement("img");
+  img.alt = "";
+  if (screenshotUrl) img.src = screenshotUrl;
+  previewBtn.appendChild(img);
+
+  const previewBadge = document.createElement("span");
+  previewBadge.className = "tab-card__preview-badge";
+  previewBadge.innerHTML =
+    '<span class="material-symbols-outlined" aria-hidden="true">zoom_in</span>';
+  previewBtn.appendChild(previewBadge);
+
+  previewBtn.addEventListener("click", () => {
+    openPreviewDialog(tab, screenshotUrl ?? undefined);
+  });
+
+  const main = document.createElement("div");
+  main.className = "tab-card__main";
 
   const body = document.createElement("div");
   body.className = "tab-card__body";
@@ -183,7 +250,8 @@ async function createCard(tab: SavedTab): Promise<HTMLElement> {
   });
 
   footer.append(btnOpen, btnDelete);
-  card.append(previewBtn, body, footer);
+  main.append(body, footer);
+  card.append(previewBtn, main);
 
   title.addEventListener("click", openTab);
   title.style.cursor = "pointer";
@@ -202,5 +270,27 @@ btnClear.addEventListener("click", async () => {
   await renderList();
 });
 
+btnViewGrid.addEventListener("click", () => {
+  void setViewMode("grid");
+});
+
+btnViewCompact.addEventListener("click", () => {
+  void setViewMode("compact");
+});
+
+previewCloseEl.addEventListener("click", () => {
+  previewDialog.close();
+});
+
+previewOpenEl.addEventListener("click", () => {
+  if (previewTab) void chrome.tabs.create({ url: previewTab.url });
+  previewDialog.close();
+});
+
+previewDialog.addEventListener("close", () => {
+  previewTab = null;
+  previewImageEl.removeAttribute("src");
+});
+
 applyI18n();
-void renderList();
+void loadViewMode().then(() => renderList());

@@ -91,5 +91,20 @@
   },
   "errorCopyUrl": {
     "message": "Could not copy URL"
+  },
+  "viewModeLabel": {
+    "message": "View"
+  },
+  "viewGrid": {
+    "message": "Grid"
+  },
+  "viewCompact": {
+    "message": "Compact"
+  },
+  "viewPreview": {
+    "message": "View screenshot"
+  },
+  "closePreview": {
+    "message": "Close"
   }
 }

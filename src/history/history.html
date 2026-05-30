@@ -27,14 +27,42 @@
       </section>
 
       <div class="toolbar">
-        <div class="text-field toolbar__sort">
-          <label for="sort" data-i18n="sortLabel">Sort by</label>
-          <select id="sort">
-            <option value="createdAt-desc" data-i18n="sortDateDesc">Date (newest)</option>
-            <option value="createdAt-asc" data-i18n="sortDateAsc">Date (oldest)</option>
-            <option value="title-asc" data-i18n="sortTitleAsc">Title (A–Z)</option>
-            <option value="title-desc" data-i18n="sortTitleDesc">Title (Z–A)</option>
-          </select>
+        <div class="toolbar__left">
+          <div class="text-field toolbar__sort">
+            <label for="sort" data-i18n="sortLabel">Sort by</label>
+            <select id="sort">
+              <option value="createdAt-desc" data-i18n="sortDateDesc">Date (newest)</option>
+              <option value="createdAt-asc" data-i18n="sortDateAsc">Date (oldest)</option>
+              <option value="title-asc" data-i18n="sortTitleAsc">Title (A–Z)</option>
+              <option value="title-desc" data-i18n="sortTitleDesc">Title (Z–A)</option>
+            </select>
+          </div>
+
+          <div class="view-toggle" role="group" aria-labelledby="view-mode-label">
+            <span id="view-mode-label" class="view-toggle__label" data-i18n="viewModeLabel">View</span>
+            <button
+              type="button"
+              id="view-grid"
+              class="view-toggle__btn is-active"
+              data-view="grid"
+              data-i18n-title="viewGrid"
+              title="Grid"
+              aria-pressed="true"
+            >
+              <span class="material-symbols-outlined" aria-hidden="true">grid_view</span>
+            </button>
+            <button
+              type="button"
+              id="view-compact"
+              class="view-toggle__btn"
+              data-view="compact"
+              data-i18n-title="viewCompact"
+              title="Compact"
+              aria-pressed="false"
+            >
+              <span class="material-symbols-outlined" aria-hidden="true">view_agenda</span>
+            </button>
+          </div>
         </div>
         <button type="button" id="btn-clear" class="outlined-button" data-i18n="clearHistory">
           Clear history
@@ -48,6 +76,31 @@
         <p data-i18n="emptyHistory">No saved tabs yet. Use the extension popup to save a tab.</p>
       </div>
     </div>
+
+    <dialog id="preview-dialog" class="preview-dialog">
+      <div class="preview-dialog__header">
+        <h2 id="preview-title" class="preview-dialog__title"></h2>
+        <button
+          type="button"
+          id="preview-close"
+          class="icon-button"
+          data-i18n-title="closePreview"
+          title="Close"
+          aria-label="Close"
+        >
+          <span class="material-symbols-outlined" aria-hidden="true">close</span>
+        </button>
+      </div>
+      <div class="preview-dialog__image-wrap">
+        <img id="preview-image" class="preview-dialog__image" alt="" />
+      </div>
+      <div class="preview-dialog__footer">
+        <button type="button" id="preview-open" class="filled-button">
+          <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>
+          <span data-i18n="openTab">Open tab</span>
+        </button>
+      </div>
+    </dialog>
 
     <div id="snackbar" class="snackbar" role="status" aria-live="polite"></div>
 

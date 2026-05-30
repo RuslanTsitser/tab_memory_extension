@@ -91,5 +91,20 @@
   },
   "errorCopyUrl": {
     "message": "URLをコピーできませんでした"
+  },
+  "viewModeLabel": {
+    "message": "表示"
+  },
+  "viewGrid": {
+    "message": "グリッド"
+  },
+  "viewCompact": {
+    "message": "コンパクト"
+  },
+  "viewPreview": {
+    "message": "スクリーンショットを表示"
+  },
+  "closePreview": {
+    "message": "閉じる"
   }
 }

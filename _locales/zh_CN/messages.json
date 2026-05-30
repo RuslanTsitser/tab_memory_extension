@@ -91,5 +91,20 @@
   },
   "errorCopyUrl": {
     "message": "无法复制 URL"
+  },
+  "viewModeLabel": {
+    "message": "视图"
+  },
+  "viewGrid": {
+    "message": "网格"
+  },
+  "viewCompact": {
+    "message": "紧凑"
+  },
+  "viewPreview": {
+    "message": "查看截图"
+  },
+  "closePreview": {
+    "message": "关闭"
   }
 }

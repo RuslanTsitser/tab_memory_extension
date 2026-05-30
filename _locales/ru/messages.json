@@ -91,5 +91,20 @@
   },
   "errorCopyUrl": {
     "message": "Не удалось скопировать URL"
+  },
+  "viewModeLabel": {
+    "message": "Вид"
+  },
+  "viewGrid": {
+    "message": "Сетка"
+  },
+  "viewCompact": {
+    "message": "Компактно"
+  },
+  "viewPreview": {
+    "message": "Открыть скриншот"
+  },
+  "closePreview": {
+    "message": "Закрыть"
   }
 }
