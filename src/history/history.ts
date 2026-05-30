@@ -6,6 +6,7 @@ import {
   getScreenshotUrl,
   getStorageStats,
 } from "../lib/db";
+import { openHomepage } from "../lib/constants";
 import type { SavedTab, SortDirection, SortField } from "../lib/types";
 
 const VIEW_STORAGE_KEY = "historyViewMode";
@@ -26,6 +27,7 @@ const previewTitleEl = document.getElementById("preview-title") as HTMLHeadingEl
 const previewImageEl = document.getElementById("preview-image") as HTMLImageElement;
 const previewOpenEl = document.getElementById("preview-open") as HTMLButtonElement;
 const previewCloseEl = document.getElementById("preview-close") as HTMLButtonElement;
+const brandLinkEl = document.getElementById("brand-link") as HTMLButtonElement;
 
 const objectUrls = new Set<string>();
 let snackbarTimer: ReturnType<typeof setTimeout> | undefined;
@@ -290,6 +292,10 @@ previewOpenEl.addEventListener("click", () => {
 previewDialog.addEventListener("close", () => {
   previewTab = null;
   previewImageEl.removeAttribute("src");
+});
+
+brandLinkEl.addEventListener("click", () => {
+  openHomepage();
 });
 
 applyI18n();

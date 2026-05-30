@@ -1,8 +1,10 @@
+import { openHomepage } from "../lib/constants";
 import type { Message, MessageResponse } from "../lib/types";
 
 const noteEl = document.getElementById("note") as HTMLTextAreaElement;
 const btnSave = document.getElementById("btn-save") as HTMLButtonElement;
 const btnHistory = document.getElementById("btn-history") as HTMLButtonElement;
+const brandLinkEl = document.getElementById("brand-link") as HTMLButtonElement;
 const statusEl = document.getElementById("status") as HTMLParagraphElement;
 const tabPreviewEl = document.getElementById("tab-preview") as HTMLParagraphElement;
 const popupEl = document.querySelector(".popup") as HTMLElement;
@@ -27,7 +29,10 @@ function applyI18n(): void {
   });
   document.querySelectorAll<HTMLElement>("[data-i18n-title]").forEach((el) => {
     const key = el.dataset.i18nTitle;
-    if (key) el.title = t(key);
+    if (!key) return;
+    const label = t(key);
+    el.title = label;
+    if (el.hasAttribute("aria-label")) el.setAttribute("aria-label", label);
   });
 }
 
@@ -94,6 +99,10 @@ btnSave.addEventListener("click", async () => {
 btnHistory.addEventListener("click", () => {
   void chrome.runtime.sendMessage({ type: "OPEN_HISTORY" } satisfies Message);
   window.close();
+});
+
+brandLinkEl.addEventListener("click", () => {
+  openHomepage();
 });
 
 void init();

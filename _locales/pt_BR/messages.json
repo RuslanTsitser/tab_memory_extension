@@ -106,5 +106,8 @@
   },
   "closePreview": {
     "message": "Fechar"
+  },
+  "openHomepage": {
+    "message": "Abrir site do Tab Memory"
   }
 }

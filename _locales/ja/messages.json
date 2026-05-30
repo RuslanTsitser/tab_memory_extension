@@ -106,5 +106,8 @@
   },
   "closePreview": {
     "message": "閉じる"
+  },
+  "openHomepage": {
+    "message": "Tab Memory のサイトを開く"
   }
 }

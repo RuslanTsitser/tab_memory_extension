@@ -106,5 +106,8 @@
   },
   "closePreview": {
     "message": "Закрыть"
+  },
+  "openHomepage": {
+    "message": "Открыть сайт Tab Memory"
   }
 }

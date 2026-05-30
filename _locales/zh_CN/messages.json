@@ -106,5 +106,8 @@
   },
   "closePreview": {
     "message": "关闭"
+  },
+  "openHomepage": {
+    "message": "打开 Tab Memory 网站"
   }
 }
